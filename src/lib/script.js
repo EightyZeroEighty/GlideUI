@@ -220,4 +220,35 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 3000)
     })
   }
+
+  // --- Sidebar Active Link on Scroll ---
+  const sections = document.querySelectorAll('section[id]')
+  const sidebarLinks = document.querySelectorAll('.sg-sidebar a')
+  const sidebar = document.querySelector('.sg-sidebar')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const activeLink = document.querySelector(`.sg-sidebar a[href="#${entry.target.id}"]`)
+
+          sidebarLinks.forEach((link) => link.classList.remove('active'))
+
+          if (activeLink) {
+            activeLink.classList.add('active')
+            // Optional: Scroll sidebar to keep active link in view
+            activeLink.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' })
+          }
+        }
+      })
+    },
+    {
+      rootMargin: '-30% 0px -60% 0px', // Triggers when a section is in the middle 10% of the viewport
+      threshold: 0,
+    }
+  )
+
+  sections.forEach((section) => {
+    observer.observe(section)
+  })
 })

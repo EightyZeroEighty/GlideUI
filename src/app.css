@@ -1,4 +1,4 @@
-@import 'themes/yellow.css';
+@import 'themes/base.css';
 
 :root {
   /* Typography Base */
@@ -285,9 +285,87 @@
   --snackbar-box-shadow: var(--shadow-lg);
 }
 
+/* --- NEW: Sidebar & Main Layout --- */
+.sg-wrapper {
+  display: flex;
+}
 
+.sg-sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: var(--color-neutral-0);
+  border-right: 1px solid var(--color-border-default);
+  padding: var(--space-l);
+  overflow-y: auto;
+  transition: background-color 0.3s, border-color 0.3s;
+}
 
-/* Global Resets & Body Styles */
+.sg-sidebar-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-500);
+  margin-bottom: var(--space-m);
+  padding-left: var(--space-s);
+}
+
+.sg-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sg-sidebar li a {
+  display: block;
+  padding: var(--space-xs) var(--space-s);
+  color: var(--color-neutral-600);
+  text-decoration: none;
+  border-radius: var(--border-radius-md);
+  transition: background-color 0.15s, color 0.15s;
+  font-size: var(--font-size-small);
+  font-weight: 500;
+}
+
+.sg-sidebar li a:hover {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+}
+
+.sg-sidebar li a.active {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+  font-weight: 700;
+}
+
+.sg-main {
+  flex-grow: 1;
+  margin-left: 260px; /* Same as sidebar width */
+  padding: var(--space-l);
+}
+
+/* Dark Mode Sidebar Styles */
+body.dark-mode .sg-sidebar {
+  background: var(--color-neutral-1000); /* A very dark color */
+  border-right-color: var(--color-neutral-300);
+}
+
+body.dark-mode .sg-sidebar li a {
+  color: var(--color-neutral-500);
+}
+
+body.dark-mode .sg-sidebar li a:hover {
+  background-color: var(--color-neutral-200);
+  color: var(--color-neutral-800);
+}
+
+body.dark-mode .sg-sidebar li a.active {
+  background-color: var(--color-primary-800);
+  color: var(--color-primary-100);
+}
+
+/* --- Global Resets & Body Styles (Adjusted) --- */
 *,
 *::before,
 *::after {
@@ -302,12 +380,10 @@ body {
   line-height: var(--line-height-base);
   color: var(--color-neutral-700);
   background-color: var(--color-neutral-50);
-  padding: var(--space-l);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container for the style guide page itself */
 .sg-container {
   max-width: 1100px;
   margin-left: auto;

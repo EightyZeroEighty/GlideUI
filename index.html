@@ -12,1405 +12,1436 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="sg-container">
-      <header>
-        <div class="header-content">
-          <h1 class="sg-title">GlideUI</h1>
-          <p class="sg-subtitle">Design System Base Style Guide v1.0</p>
-          <p class="sg-description">
-            This document outlines the core foundational elements of the GlideUI design system, including typography, spacing, base color palettes, borders, corner radii, shadows, buttons, form inputs, alerts, cards, tables, navigation, modals,
-            tooltips, dropdowns, accordions, badges, progress bars, loaders, and layout grid. These elements are intended to be themed for specific projects.
-          </p>
-        </div>
-        <button type="button" class="theme-toggle-button" id="theme-toggle" aria-label="Toggle light and dark theme">
-          <svg class="icon icon-sm" id="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="icon icon-sm" id="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-          <span id="theme-toggle-text">Toggle Theme</span>
-        </button>
-      </header>
+    <div class="sg-wrapper">
+      <nav class="sg-sidebar">
+        <h2 class="sg-sidebar-title">GlideUI</h2>
+        <ul>
+          <li><a href="#section-typography">Typography</a></li>
+          <li><a href="#section-colors">Colors</a></li>
+          <li><a href="#section-spacing">Spacing</a></li>
+          <li><a href="#section-layout">Layout & Grid</a></li>
+          <li><a href="#section-borders">Borders</a></li>
+          <li><a href="#section-radii">Corner Radii</a></li>
+          <li><a href="#section-shadows">Shadows</a></li>
+          <li><a href="#section-iconography">Iconography</a></li>
+          <li><a href="#section-buttons">Buttons</a></li>
+          <li><a href="#section-forms">Form Inputs</a></li>
+          <li><a href="#section-alerts">Alerts</a></li>
+          <li><a href="#section-cards">Cards</a></li>
+          <li><a href="#section-tables">Tables</a></li>
+          <li><a href="#section-navigation">Navigation</a></li>
+          <li><a href="#section-modals">Modals</a></li>
+          <li><a href="#section-tooltips">Tooltips</a></li>
+          <li><a href="#section-dropdowns">Dropdowns</a></li>
+          <li><a href="#section-accordions">Accordions</a></li>
+          <li><a href="#section-badges">Badges</a></li>
+          <li><a href="#section-progress">Progress Bars</a></li>
+          <li><a href="#section-loaders">Loaders</a></li>
+          <li><a href="#section-additional">Additional</a></li>
+          <li><a href="#section-utilities">Utilities</a></li>
+          <li><a href="#section-specialized">Specialized</a></li>
+        </ul>
+      </nav>
 
-      <!-- Typography Section -->
-      <section>
-        <h2>Typography</h2>
-
-        <div style="margin-bottom: var(--space-l)">
-          <h3>Font Families</h3>
-          <p><strong>Body Text:</strong> Roboto</p>
-          <p><strong>Heading Text:</strong> Merriweather</p>
-        </div>
-
-        <div style="margin-bottom: var(--space-l)">
-          <h3>Typographic Scale <span style="font-size: 0.8em; font-weight: 400; color: var(--color-neutral-500)">(Base: 16px, Scale: Major Third 1.250)</span></h3>
-          <div><h1>H1 Heading</h1></div>
-          <div><h2>H2 Heading</h2></div>
-          <div><h3>H3 Heading</h3></div>
-          <div><h4>H4 Heading</h4></div>
-          <div><h5>H5 Heading</h5></div>
-          <div><p>This is a paragraph of body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
-          <div><p class="text-small" style="font-family: var(--font-family-body)">This is small text.</p></div>
-        </div>
-        <div style="margin-bottom: var(--space-l)">
-          <h3>Line Heights</h3>
-          <p><strong>Body Text Line Height:</strong> 1.5 (<code>var(--line-height-base)</code>)</p>
-          <p><strong>Heading Text Line Height:</strong> 1.2 (<code>var(--line-height-heading)</code>)</p>
-        </div>
-      </section>
-
-      <!-- Colors Section -->
-      <section>
-        <h2>Colors</h2>
-        <p class="themed-color-note">The Primary, Secondary, and Accent palettes below use abstract placeholder colors to demonstrate the scale. These are intended to be overridden by specific project themes.</p>
-
-        <!-- Primary Colors -->
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Primary Palette</h3>
-          <div class="color-palette-grid">
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-50); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-50</p>
-                <p class="text-value-display">#EBF4FA</p>
-              </div>
+      <div class="sg-main">
+        <div class="sg-container">
+          <header>
+            <div class="header-content">
+              <h1 class="sg-title">GlideUI</h1>
+              <p class="sg-subtitle">Design System Base Style Guide v1.0</p>
+              <p class="sg-description">This document outlines the core foundational elements of the GlideUI design system. Use the sidebar to navigate through the different sections.</p>
             </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-100); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-100</p>
-                <p class="text-value-display">#D6E9F5</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-200); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-200</p>
-                <p class="text-value-display">#ADDAEF</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-300); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-300</p>
-                <p class="text-value-display">#84CAE9</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-400); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-400</p>
-                <p class="text-value-display">#5BB9E3</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-500); color: var(--color-neutral-0)">Base</div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-500</p>
-                <p class="text-value-display">#32A9DD</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-600); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-600</p>
-                <p class="text-value-display">#2A8FBA</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-700); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-700</p>
-                <p class="text-value-display">#227598</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-800); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-800</p>
-                <p class="text-value-display">#1A5B75</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-primary-900); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-primary-900</p>
-                <p class="text-value-display">#124153</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Secondary Colors -->
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Secondary Palette</h3>
-          <div class="color-palette-grid">
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-50); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-50</p>
-                <p class="text-value-display">#F5F7F8</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-100); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-100</p>
-                <p class="text-value-display">#EBEEF0</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-200); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-200</p>
-                <p class="text-value-display">#D8DDE1</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-300); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-300</p>
-                <p class="text-value-display">#C4CBD2</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-400); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-400</p>
-                <p class="text-value-display">#B1B9C3</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-500); color: var(--color-neutral-0)">Base</div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-500</p>
-                <p class="text-value-display">#8F9CAA</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-600); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-600</p>
-                <p class="text-value-display">#798591</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-700); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-700</p>
-                <p class="text-value-display">#636E78</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-800); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-800</p>
-                <p class="text-value-display">#4D575F</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-secondary-900); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-secondary-900</p>
-                <p class="text-value-display">#374046</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Accent Colors -->
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Accent Palette</h3>
-          <div class="color-palette-grid">
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-50); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-50</p>
-                <p class="text-value-display">#EAF6F5</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-100); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-100</p>
-                <p class="text-value-display">#D5EDE9</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-200); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-200</p>
-                <p class="text-value-display">#ABDBCF</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-300); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-300</p>
-                <p class="text-value-display">#82C9B6</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-400); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-400</p>
-                <p class="text-value-display">#58B79C</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-500); color: var(--color-neutral-0)">Base</div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-500</p>
-                <p class="text-value-display">#2FA482</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-600); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-600</p>
-                <p class="text-value-display">#288A6E</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-700); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-700</p>
-                <p class="text-value-display">#20705A</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-800); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-800</p>
-                <p class="text-value-display">#185646</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-accent-900); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-accent-900</p>
-                <p class="text-value-display">#103C32</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Neutral Colors -->
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Neutral Palette (GlideUI Core)</h3>
-          <div class="color-palette-grid">
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-0); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-0</p>
-                <p class="text-value-display">#FFFFFF</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-50); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-50</p>
-                <p class="text-value-display">#F8F9FA</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-100); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-100</p>
-                <p class="text-value-display">#F1F3F5</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-200); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-200</p>
-                <p class="text-value-display">#E9ECEF</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-300); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-300</p>
-                <p class="text-value-display">#DEE2E6</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-400); color: var(--color-neutral-800)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-400</p>
-                <p class="text-value-display">#CED4DA</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-500); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-500</p>
-                <p class="text-value-display">#ADB5BD</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-600); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-600</p>
-                <p class="text-value-display">#868E96</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-700); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-700</p>
-                <p class="text-value-display">#495057</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-800); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-800</p>
-                <p class="text-value-display">#343A40</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-900); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-900</p>
-                <p class="text-value-display">#212529</p>
-              </div>
-            </div>
-            <div class="color-swatch-wrapper">
-              <div class="color-swatch" style="background-color: var(--color-neutral-1000); color: var(--color-neutral-0)"></div>
-              <div class="swatch-info">
-                <p class="font-medium">--color-neutral-1000</p>
-                <p class="text-value-display">#000000</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Semantic Colors -->
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Semantic Colors</h3>
-          <p class="themed-color-note">
-            The Semantic colors below use abstract placeholder colors. These are intended to be subtly adjusted by specific project themes if strong brand alignment is needed, while maintaining their core meaning. Examples show typical usage for
-            alert-style components.
-          </p>
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-l)">
-            <div class="semantic-category">
-              <h4>Success</h4>
-              <div class="semantic-example-element" style="background-color: var(--color-semantic-success-background); color: var(--color-semantic-success-text); border-color: var(--color-semantic-success-border)">Success Example</div>
-              <div class="semantic-variable-list">
-                <p><code>--color-semantic-success-background:</code> <span class="text-value-display">#E8F5E9</span></p>
-                <p><code>--color-semantic-success-text:</code> <span class="text-value-display">#2A573F</span></p>
-                <p><code>--color-semantic-success-border:</code> <span class="text-value-display">#A5D6A7</span></p>
-                <p><code>--color-semantic-success-base (Base):</code> <span class="text-value-display">#6BBF70</span></p>
-              </div>
-            </div>
-
-            <div class="semantic-category">
-              <h4>Warning</h4>
-              <div class="semantic-example-element" style="background-color: var(--color-semantic-warning-background); color: var(--color-semantic-warning-text); border-color: var(--color-semantic-warning-border)">Warning Example</div>
-              <div class="semantic-variable-list">
-                <p><code>--color-semantic-warning-background:</code> <span class="text-value-display">#FFF8E1</span></p>
-                <p><code>--color-semantic-warning-text:</code> <span class="text-value-display">#854D0E</span></p>
-                <p><code>--color-semantic-warning-border:</code> <span class="text-value-display">#FFCC80</span></p>
-                <p><code>--color-semantic-warning-base (Base):</code> <span class="text-value-display">#FFB74D</span></p>
-              </div>
-            </div>
-
-            <div class="semantic-category">
-              <h4>Error/Danger</h4>
-              <div class="semantic-example-element" style="background-color: var(--color-semantic-error-background); color: var(--color-semantic-error-text); border-color: var(--color-semantic-error-border)">Error/Danger Example</div>
-              <div class="semantic-variable-list">
-                <p><code>--color-semantic-error-background:</code> <span class="text-value-display">#FFEBEE</span></p>
-                <p><code>--color-semantic-error-text:</code> <span class="text-value-display">#B71C1C</span></p>
-                <p><code>--color-semantic-error-border:</code> <span class="text-value-display">#EF9A9A</span></p>
-                <p><code>--color-semantic-error-base (Base):</code> <span class="text-value-display">#E57373</span></p>
-              </div>
-            </div>
-
-            <div class="semantic-category">
-              <h4>Information</h4>
-              <div class="semantic-example-element" style="background-color: var(--color-semantic-info-background); color: var(--color-semantic-info-text); border-color: var(--color-semantic-info-border)">Information Example</div>
-              <div class="semantic-variable-list">
-                <p><code>--color-semantic-info-background:</code> <span class="text-value-display">#E3F2FD</span></p>
-                <p><code>--color-semantic-info-text:</code> <span class="text-value-display">#1976D2</span></p>
-                <p><code>--color-semantic-info-border:</code> <span class="text-value-display">#90CAF9</span></p>
-                <p><code>--color-semantic-info-base (Base):</code> <span class="text-value-display">#64B5F6</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Spacing Section -->
-      <section>
-        <h2>Spacing</h2>
-        <p style="margin-bottom: var(--space-l)">Base unit: 8px. Values are provided in CSS variables, pixel equivalents, and rem units (assuming 1rem = 16px).</p>
-        <div class="spacing-table-wrapper">
-          <table class="spacing-table">
-            <thead>
-              <tr>
-                <th>Variable</th>
-                <th>Pixels (px)</th>
-                <th>Rems</th>
-                <th>Sample</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>--space-xxs</td>
-                <td>4px</td>
-                <td>0.25rem</td>
-                <td><div class="spacing-sample" style="height: 4px; width: 4px; line-height: 4px">4px</div></td>
-              </tr>
-              <tr>
-                <td>--space-xs</td>
-                <td>8px</td>
-                <td>0.5rem</td>
-                <td><div class="spacing-sample" style="height: 8px; width: 8px; line-height: 8px">8px</div></td>
-              </tr>
-              <tr>
-                <td>--space-s</td>
-                <td>12px</td>
-                <td>0.75rem</td>
-                <td><div class="spacing-sample" style="height: 12px; width: 12px; line-height: 12px">12px</div></td>
-              </tr>
-              <tr>
-                <td>--space-m</td>
-                <td>16px</td>
-                <td>1rem</td>
-                <td><div class="spacing-sample" style="height: 16px; width: 16px; line-height: 16px">16px</div></td>
-              </tr>
-              <tr>
-                <td>--space-l</td>
-                <td>24px</td>
-                <td>1.5rem</td>
-                <td><div class="spacing-sample" style="height: 24px; width: 24px; line-height: 24px">24px</div></td>
-              </tr>
-              <tr>
-                <td>--space-xl</td>
-                <td>32px</td>
-                <td>2rem</td>
-                <td><div class="spacing-sample" style="height: 32px; width: 32px; line-height: 32px">32px</div></td>
-              </tr>
-              <tr>
-                <td>--space-2xl</td>
-                <td>40px</td>
-                <td>2.5rem</td>
-                <td><div class="spacing-sample" style="height: 40px; width: 40px; line-height: 40px">40px</div></td>
-              </tr>
-              <tr>
-                <td>--space-3xl</td>
-                <td>48px</td>
-                <td>3rem</td>
-                <td><div class="spacing-sample" style="height: 48px; width: 48px; line-height: 48px">48px</div></td>
-              </tr>
-              <tr>
-                <td>--space-4xl</td>
-                <td>64px</td>
-                <td>4rem</td>
-                <td><div class="spacing-sample" style="height: 64px; width: 64px; line-height: 64px">64px</div></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Borders Section -->
-      <section>
-        <h2>Borders</h2>
-        <p style="margin-bottom: var(--space-l)">Defines standard border properties. Specific border colors can be themed using neutral or brand color palettes.</p>
-
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Border Properties</h3>
-          <table class="spacing-table">
-            <thead>
-              <tr>
-                <th>Variable</th>
-                <th>Value</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>--border-width-thin</code></td>
-                <td>1px</td>
-                <td>Standard default border width.</td>
-              </tr>
-              <tr>
-                <td><code>--border-width-medium</code></td>
-                <td>2px</td>
-                <td>For focus states or emphasis.</td>
-              </tr>
-              <tr>
-                <td><code>--border-style-default</code></td>
-                <td>solid</td>
-                <td>Recommended style for most UI borders.</td>
-              </tr>
-              <tr>
-                <td><code>--color-border-default</code></td>
-                <td>var(--color-neutral-300)</td>
-                <td>Default border color (placeholder: #DEE2E6). Themeable.</td>
-              </tr>
-              <tr>
-                <td><code>--color-border-subtle</code></td>
-                <td>var(--color-neutral-200)</td>
-                <td>For very light borders (placeholder: #E9ECEF). Themeable.</td>
-              </tr>
-              <tr>
-                <td><code>--color-border-strong</code></td>
-                <td>var(--color-neutral-400)</td>
-                <td>For more prominent borders (placeholder: #CED4DA). Themeable.</td>
-              </tr>
-              <tr>
-                <td><code>--color-border-interactive</code></td>
-                <td>var(--color-primary-500)</td>
-                <td>For interactive elements like focus states (placeholder: #32A9DD). Themeable.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Border Examples</h3>
-        <div class="border-example-grid">
-          <div class="border-example-item" style="border: var(--border-width-thin) var(--border-style-default) var(--color-border-default)">Thin Default Border</div>
-          <div class="border-example-item" style="border: var(--border-width-medium) var(--border-style-default) var(--color-border-strong)">Medium Strong Border</div>
-          <div class="border-example-item" style="border: var(--border-width-medium) var(--border-style-default) var(--color-border-interactive)">Medium Interactive Border</div>
-          <div class="border-example-item" style="border-top: var(--border-width-thin) var(--border-style-default) var(--color-border-subtle); padding-top: calc(var(--space-m) - var(--border-width-thin))">Subtle Top Border (Divider)</div>
-        </div>
-        <p>Semantic borders are demonstrated in the Semantic Colors section (e.g., <code>--color-semantic-success-border</code>).</p>
-      </section>
-
-      <!-- Corner Radii Section -->
-      <section>
-        <h2>Corner Radii</h2>
-        <p style="margin-bottom: var(--space-l)">Defines standard corner radius values for creating rounded elements like buttons, cards, and inputs.</p>
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Radius Properties</h3>
-          <table class="spacing-table">
-            <thead>
-              <tr>
-                <th>Variable</th>
-                <th>Value</th>
-                <th>Typical Use Case</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>--border-radius-none</code></td>
-                <td>0px</td>
-                <td>No rounding, sharp edges.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-xs</code></td>
-                <td>2px</td>
-                <td>Subtle rounding for small elements or tags.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-sm</code></td>
-                <td>4px</td>
-                <td>Subtle rounding for small elements or tags.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-md</code></td>
-                <td>8px</td>
-                <td>Common default for buttons, inputs, cards.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-lg</code></td>
-                <td>16px</td>
-                <td>More pronounced rounding for larger cards or containers.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-xl</code></td>
-                <td>24px</td>
-                <td>Softer, more modern feel for larger elements.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-pill</code></td>
-                <td>9999px</td>
-                <td>Creates pill-shaped buttons or elements.</td>
-              </tr>
-              <tr>
-                <td><code>--border-radius-circle</code></td>
-                <td>50%</td>
-                <td>Creates perfect circles (for square elements).</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Radius Examples</h3>
-        <div class="radius-example-grid">
-          <div class="radius-example-item" style="border-radius: var(--border-radius-none)">None (0px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-xs)">Extra Small (2px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-sm)">Small (4px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-md)">Medium (8px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-lg)">Large (16px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-xl)">X-Large (24px)</div>
-          <div class="radius-example-item" style="border-radius: var(--border-radius-pill)">Pill (9999px)</div>
-          <div class="radius-example-item" style="width: 80px; border-radius: var(--border-radius-circle)">Circle (50%)</div>
-        </div>
-      </section>
-
-      <!-- Shadows Section -->
-      <section>
-        <h2>Shadows</h2>
-        <p style="margin-bottom: var(--space-l)">Provides a set of standardized shadows for creating depth and elevation in the UI. The base shadow color is themeable.</p>
-        <div style="margin-bottom: var(--space-xl)">
-          <h3>Shadow Properties</h3>
-          <table class="spacing-table">
-            <thead>
-              <tr>
-                <th>Variable</th>
-                <th>CSS <code>box-shadow</code> Value</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>--shadow-color</code></td>
-                <td>rgba(0, 0, 0, 0.1)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-color-strong</code></td>
-                <td>rgba(0, 0, 0, 0.15)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-sm</code></td>
-                <td>0 1px 2px 0 var(--shadow-color)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-md</code></td>
-                <td>0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px rgba(0,0,0,0.06)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-lg</code></td>
-                <td>0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px rgba(0,0,0,0.05)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-xl</code></td>
-                <td>0 20px 25px -5px var(--shadow-color-strong), 0 10px 10px -5px rgba(0,0,0,0.04)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-inner</code></td>
-                <td>inset 0 2px 4px 0 var(--shadow-color)</td>
-              </tr>
-              <tr>
-                <td><code>--shadow-none</code></td>
-                <td>none</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>Shadow Examples</h3>
-        <div class="shadow-example-grid">
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-sm)">Small Shadow</div>
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-md)">Medium Shadow</div>
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-lg)">Large Shadow</div>
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-xl)">X-Large Shadow</div>
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-inner)">Inner Shadow</div>
-          <div class="shadow-example-item" style="box-shadow: var(--shadow-none)">No Shadow</div>
-        </div>
-      </section>
-
-      <!-- Buttons Section -->
-      <section>
-        <h2>Buttons</h2>
-        <p style="margin-bottom: var(--space-l)">Defines core button styles and variants. Button colors are themeable using the Primary and Neutral color palettes.</p>
-
-        <h4>Button Sizes</h4>
-        <div class="button-showcase">
-          <button type="button" class="btn btn-primary btn-sm">Small Primary</button>
-          <button type="button" class="btn btn-primary">Medium Primary</button>
-          <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
-        </div>
-        <div class="button-showcase">
-          <button type="button" class="btn btn-secondary btn-sm">Small Secondary</button>
-          <button type="button" class="btn btn-secondary">Medium Secondary</button>
-          <button type="button" class="btn btn-secondary btn-lg">Large Secondary</button>
-        </div>
-        <div class="button-showcase" style="margin-bottom: var(--space-xl)">
-          <button type="button" class="btn btn-text btn-sm">Small Text</button>
-          <button type="button" class="btn btn-text">Medium Text</button>
-          <button type="button" class="btn btn-text btn-lg">Large Text</button>
-        </div>
-
-        <h4>Base Button Styles & Disabled States</h4>
-        <div class="button-showcase">
-          <button type="button" class="btn btn-primary">Primary</button>
-          <button type="button" class="btn btn-secondary">Secondary</button>
-          <button type="button" class="btn btn-text">Text Button</button>
-        </div>
-        <div class="button-showcase">
-          <button type="button" class="btn btn-primary" disabled>Primary Disabled</button>
-          <button type="button" class="btn btn-secondary" disabled>Secondary Disabled</button>
-          <button type="button" class="btn btn-text" disabled>Text Disabled</button>
-        </div>
-
-        <div style="margin-top: var(--space-xl)">
-          <h3>Button States Showcase</h3>
-          <p class="text-small" style="margin-bottom: var(--space-s)">The following buttons are styled to permanently represent their states for demonstration. Actual states are interactive.</p>
-
-          <p class="button-group-title">Primary States:</p>
-          <div class="button-showcase">
-            <button type="button" class="btn btn-primary">Default</button>
-            <button type="button" class="btn btn-primary simulate-hover">Hover</button>
-            <button type="button" class="btn btn-primary simulate-active">Active</button>
-            <button type="button" class="btn btn-primary simulate-focus">Focus</button>
-          </div>
-
-          <p class="button-group-title">Secondary States:</p>
-          <div class="button-showcase">
-            <button type="button" class="btn btn-secondary">Default</button>
-            <button type="button" class="btn btn-secondary simulate-hover">Hover</button>
-            <button type="button" class="btn btn-secondary simulate-active">Active</button>
-            <button type="button" class="btn btn-secondary simulate-focus">Focus</button>
-          </div>
-
-          <p class="button-group-title">Text States:</p>
-          <div class="button-showcase">
-            <button type="button" class="btn btn-text">Default</button>
-            <button type="button" class="btn btn-text simulate-hover">Hover</button>
-            <button type="button" class="btn btn-text simulate-active">Active</button>
-            <button type="button" class="btn btn-text simulate-focus">Focus</button>
-          </div>
-        </div>
-      </section>
-
-      <!-- Form Inputs Section -->
-      <section>
-        <h2>Form Inputs</h2>
-        <p style="margin-bottom: var(--space-l)">Defines styles for common form input elements. These are designed to be clear, accessible, and themeable.</p>
-
-        <h4>Text Input & Textarea</h4>
-        <div class="form-group">
-          <label for="text-input-default" class="form-label">Default Text Input</label>
-          <input type="text" id="text-input-default" class="form-input" placeholder="Enter text here..." />
-        </div>
-        <div class="form-group">
-          <label for="text-input-focus" class="form-label">Focus State (click me)</label>
-          <input type="text" id="text-input-focus" class="form-input" placeholder="Focus on me" />
-        </div>
-        <div class="form-group">
-          <label for="text-input-disabled" class="form-label">Disabled Text Input</label>
-          <input type="text" id="text-input-disabled" class="form-input" placeholder="Disabled" disabled />
-        </div>
-        <div class="form-group">
-          <label for="textarea-default" class="form-label">Default Textarea</label>
-          <textarea id="textarea-default" class="form-textarea" rows="4" placeholder="Enter multiple lines of text..."></textarea>
-        </div>
-        <div class="form-group">
-          <label for="text-input-helper" class="form-label">Input with Helper</label>
-          <input type="text" id="text-input-helper" class="form-input" placeholder="Helper text below" />
-          <span class="form-helper-text">This is some helpful information about the input.</span>
-        </div>
-        <div class="form-group">
-          <label for="text-input-error" class="form-label">Input with Error</label>
-          <input type="text" id="text-input-error" class="form-input is-error" value="Invalid input" aria-describedby="text-input-error-msg" />
-          <span id="text-input-error-msg" class="form-helper-text is-error">This field has an error.</span>
-        </div>
-        <div class="form-group">
-          <label for="text-input-success" class="form-label">Input with Success</label>
-          <input type="text" id="text-input-success" class="form-input is-success" value="Looks good!" aria-describedby="text-input-success-msg" />
-          <span id="text-input-success-msg" class="form-helper-text is-success">Your input is valid.</span>
-        </div>
-
-        <h4>Selection Controls</h4>
-        <div class="form-group">
-          <p class="form-label" style="margin-bottom: var(--space-s)">Checkboxes</p>
-          <label class="form-control-custom">
-            <input type="checkbox" name="checkbox-group" id="cb-1" checked />
-            <span class="control-indicator"></span>
-            <span>Option 1 (checked)</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="checkbox" name="checkbox-group" id="cb-2" />
-            <span class="control-indicator"></span>
-            <span>Option 2</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="checkbox" name="checkbox-group" id="cb-3" disabled />
-            <span class="control-indicator"></span>
-            <span>Option 3 (disabled)</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="checkbox" name="checkbox-group" id="cb-4" checked disabled />
-            <span class="control-indicator"></span>
-            <span>Option 4 (checked & disabled)</span>
-          </label>
-        </div>
-
-        <div class="form-group">
-          <p class="form-label" style="margin-bottom: var(--space-s)">Radio Buttons</p>
-          <label class="form-control-custom">
-            <input type="radio" name="radio-group" id="rb-1" checked />
-            <span class="control-indicator"></span>
-            <span>Choice A (selected)</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="radio" name="radio-group" id="rb-2" />
-            <span class="control-indicator"></span>
-            <span>Choice B</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="radio" name="radio-group" id="rb-3" disabled />
-            <span class="control-indicator"></span>
-            <span>Choice C (disabled)</span>
-          </label>
-          <label class="form-control-custom">
-            <input type="radio" name="radio-group-disabled-checked" id="rb-4" checked disabled />
-            <span class="control-indicator"></span>
-            <span>Choice D (selected & disabled)</span>
-          </label>
-        </div>
-
-        <h4>Select Dropdown</h4>
-        <div class="form-group">
-          <label for="select-default" class="form-label">Default Select</label>
-          <select id="select-default" class="form-select">
-            <option>Please select an option...</option>
-            <option value="1">Option One</option>
-            <option value="2">Option Two has longer text</option>
-            <option value="3">Option Three</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="select-disabled" class="form-label">Disabled Select</label>
-          <select id="select-disabled" class="form-select" disabled>
-            <option>Disabled dropdown</option>
-            <option value="1">Option One</option>
-          </select>
-        </div>
-      </section>
-
-      <!-- Alerts Section -->
-      <section>
-        <h2>Alerts / Notifications</h2>
-        <p style="margin-bottom: var(--space-l)">Provides feedback messages for typical user actions, using semantic colors.</p>
-        <div class="alert alert-success"><strong class="alert-title">Success!</strong> Your action was completed successfully.</div>
-        <div class="alert alert-info"><strong class="alert-title">Information:</strong> Here is some useful information for you.</div>
-        <div class="alert alert-warning"><strong class="alert-title">Warning:</strong> Please be aware of this potential issue.</div>
-        <div class="alert alert-error"><strong class="alert-title">Error!</strong> An error occurred while processing your request.</div>
-      </section>
-
-      <!-- Cards Section -->
-      <section>
-        <h2>Cards</h2>
-        <p style="margin-bottom: var(--space-l)">Cards are flexible content containers.</p>
-        <div class="card">
-          <div class="card-header">
-            <h3>Card Title</h3>
-          </div>
-          <div class="card-body">
-            <p>This is the main content of the card. It can contain text, images, lists, and other elements. We are using our defined padding and typography.</p>
-            <p>Another paragraph to show spacing within the card body.</p>
-          </div>
-          <div class="card-footer">
-            <button type="button" class="btn btn-primary">Action 1</button>
-            <button type="button" class="btn btn-text">Action 2</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-body">
-            <h4>Card with Body Only</h4>
-            <p>This card only has a body section, demonstrating a simpler use case. It still uses the standard card styling for background, border, radius, and shadow.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tables Section -->
-      <section>
-        <h2>Tables</h2>
-        <p style="margin-bottom: var(--space-l)">Basic styling for data tables.</p>
-        <div class="table-wrapper">
-          <table class="glide-table">
-            <thead>
-              <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-                <th>Header 4</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Data Cell 1.1</td>
-                <td>Data Cell 1.2</td>
-                <td>Data Cell 1.3</td>
-                <td>Data Cell 1.4</td>
-              </tr>
-              <tr>
-                <td>Data Cell 2.1</td>
-                <td>Data Cell 2.2 with longer content</td>
-                <td>Data Cell 2.3</td>
-                <td>Data Cell 2.4</td>
-              </tr>
-              <tr>
-                <td>Data Cell 3.1</td>
-                <td>Data Cell 3.2</td>
-                <td>Data Cell 3.3</td>
-                <td>Data Cell 3.4</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- Navigation Elements Section -->
-      <section>
-        <h2>Navigation Elements</h2>
-        <p style="margin-bottom: var(--space-l)">Basic structures for common navigation patterns.</p>
-
-        <h4>Navbar (Basic Example)</h4>
-        <nav class="navbar">
-          <a href="#" class="navbar-brand">GlideLogo</a>
-          <ul class="navbar-nav">
-            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-          </ul>
-        </nav>
-
-        <h4 style="margin-top: var(--space-2xl)">Tabs (Basic Example)</h4>
-        <div>
-          <div class="tab-nav">
-            <button type="button" class="tab-link active" data-tab-target="#tab1-content-interactive">Tab One</button>
-            <button type="button" class="tab-link" data-tab-target="#tab2-content-interactive">Tab Two</button>
-            <button type="button" class="tab-link" data-tab-target="#tab3-content-interactive">Tab Three</button>
-          </div>
-          <div class="tab-content-wrapper">
-            <div id="tab1-content-interactive" class="tab-pane active">
-              <h5>Content for Tab One</h5>
-              <p>This is the content shown for the first tab. It can be any HTML content you need.</p>
-            </div>
-            <div id="tab2-content-interactive" class="tab-pane">
-              <h5>Content for Tab Two</h5>
-              <p>This is some different content for the second tab, demonstrating how tabs can switch views.</p>
-            </div>
-            <div id="tab3-content-interactive" class="tab-pane">
-              <h5>Content for Tab Three</h5>
-              <p>And finally, the content for the third tab panel.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Modals Section -->
-      <section>
-        <h2>Modals / Dialogs</h2>
-        <p style="margin-bottom: var(--space-l)">Modals are used to display focused content or require user interaction.</p>
-
-        <button type="button" class="btn btn-primary" data-modal-trigger="sample-modal-interactive">Open Modal Example</button>
-
-        <div id="sample-modal-interactive" class="modal-overlay">
-          <div class="modal-content" role="dialog" aria-labelledby="modal-title-1" aria-modal="true">
-            <div class="modal-header">
-              <h3 id="modal-title-1">Modal Title</h3>
-              <button type="button" class="modal-close-button" data-modal-close aria-label="Close modal">&times;</button>
-            </div>
-            <div class="modal-body">
-              <p>This is the main content of the modal. It can contain forms, information, or any other elements needed for the interaction.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent Rerum harum ipsam maiores doloremque, quos, quae eaque perferendis necessitatibus dicta mollitia.</p>
-              <input type="text" class="form-input" placeholder="Test input for focus trap" />
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
-              <button type="button" class="btn btn-primary" data-modal-close>Confirm Action</button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Tooltips Section (HTML for trigger and tooltip remains, JS interaction note added) -->
-      <section>
-        <h2>Tooltips (GlideUI Core)</h2>
-        <p style="margin-bottom: var(--space-l)">Tooltips provide contextual information on hover or focus. <em>Current implementation is CSS-only for hover/focus. JavaScript can enhance behavior (e.g., click to toggle, positioning).</em></p>
-        <div class="button-showcase">
-          <div class="tooltip-container">
-            <button type="button" class="btn btn-primary tooltip-trigger" aria-describedby="tooltip1-interactive">Hover for Tooltip</button>
-            <span class="tooltip-text" id="tooltip1-interactive" role="tooltip">This is a helpful tooltip!</span>
-          </div>
-
-          <div class="tooltip-container" style="margin-left: var(--space-4xl)">
-            <span class="tooltip-trigger" tabindex="0" style="border-bottom: 1px dashed var(--color-neutral-500); cursor: help" aria-describedby="tooltip2-interactive">Focus or Hover Text </span>
-            <span class="tooltip-text" id="tooltip2-interactive" role="tooltip">More details about this text.</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Dropdown Menus Section -->
-      <section>
-        <h2>Dropdown Menus</h2>
-        <p style="margin-bottom: var(--space-l)">Dropdown menus provide a list of actions or links.</p>
-
-        <h4>Interactive Dropdown Example</h4>
-        <div class="dropdown" style="margin-bottom: var(--space-l); display: inline-block">
-          <button type="button" class="btn btn-secondary dropdown-trigger" aria-haspopup="true" aria-expanded="false">Dropdown Menu</button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider" /></li>
-            <li><h6 class="dropdown-header">Dropdown header</h6></li>
-            <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Disabled link</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Accordions Section -->
-      <section>
-        <h2>Accordions / Collapsible Sections</h2>
-        <p style="margin-bottom: var(--space-l)">Accordions allow content to be shown or hidden.</p>
-        <div class="accordion">
-          <div class="accordion-item">
-            <button type="button" class="accordion-header" aria-expanded="false">
-              <span>Accordion Item #1</span>
-              <span class="accordion-icon">+</span>
+            <button type="button" class="theme-toggle-button" id="theme-toggle" aria-label="Toggle light and dark theme">
+              <svg class="icon icon-sm" id="theme-toggle-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg class="icon icon-sm" id="theme-toggle-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <span id="theme-toggle-text">Toggle Theme</span>
             </button>
-            <div class="accordion-content">
-              <p>This is the content for the first accordion item. It can be any HTML content you need.</p>
+          </header>
+
+          <!-- Typography Section -->
+          <section id="section-typography">
+            <h2>Typography</h2>
+
+            <div style="margin-bottom: var(--space-l)">
+              <h3>Font Families</h3>
+              <p><strong>Body Text:</strong> Roboto</p>
+              <p><strong>Heading Text:</strong> Merriweather</p>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-header" aria-expanded="false">
-              <span>Accordion Item #2</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <p>This is the content for the second accordion item. It is hidden by default.</p>
+
+            <div style="margin-bottom: var(--space-l)">
+              <h3>Typographic Scale <span style="font-size: 0.8em; font-weight: 400; color: var(--color-neutral-500)">(Base: 16px, Scale: Major Third 1.250)</span></h3>
+              <div><h1>H1 Heading</h1></div>
+              <div><h2>H2 Heading</h2></div>
+              <div><h3>H3 Heading</h3></div>
+              <div><h4>H4 Heading</h4></div>
+              <div><h5>H5 Heading</h5></div>
+              <div><p>This is a paragraph of body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></div>
+              <div><p class="text-small" style="font-family: var(--font-family-body)">This is small text.</p></div>
             </div>
-          </div>
-          <div class="accordion-item">
-            <button type="button" class="accordion-header" aria-expanded="false">
-              <span>Accordion Item #3</span>
-              <span class="accordion-icon">+</span>
-            </button>
-            <div class="accordion-content">
-              <p>Content for the third item goes here. It can be longer and include various HTML elements.</p>
-              <ul>
-                <li>List item one</li>
-                <li>List item two</li>
+            <div style="margin-bottom: var(--space-l)">
+              <h3>Line Heights</h3>
+              <p><strong>Body Text Line Height:</strong> 1.5 (<code>var(--line-height-base)</code>)</p>
+              <p><strong>Heading Text Line Height:</strong> 1.2 (<code>var(--line-height-heading)</code>)</p>
+            </div>
+          </section>
+
+          <!-- Colors Section -->
+          <section id="section-colors">
+            <h2>Colors</h2>
+            <p class="themed-color-note">The Primary, Secondary, and Accent palettes below use abstract placeholder colors to demonstrate the scale. These are intended to be overridden by specific project themes.</p>
+
+            <!-- Primary Colors -->
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Primary Palette</h3>
+              <div class="color-palette-grid">
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-50); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-50</p>
+                    <p class="text-value-display">#EBF4FA</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-100); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-100</p>
+                    <p class="text-value-display">#D6E9F5</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-200); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-200</p>
+                    <p class="text-value-display">#ADDAEF</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-300); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-300</p>
+                    <p class="text-value-display">#84CAE9</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-400); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-400</p>
+                    <p class="text-value-display">#5BB9E3</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-500); color: var(--color-neutral-0)">Base</div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-500</p>
+                    <p class="text-value-display">#32A9DD</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-600); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-600</p>
+                    <p class="text-value-display">#2A8FBA</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-700); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-700</p>
+                    <p class="text-value-display">#227598</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-800); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-800</p>
+                    <p class="text-value-display">#1A5B75</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-primary-900); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-primary-900</p>
+                    <p class="text-value-display">#124153</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Secondary Colors -->
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Secondary Palette</h3>
+              <div class="color-palette-grid">
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-50); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-50</p>
+                    <p class="text-value-display">#F5F7F8</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-100); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-100</p>
+                    <p class="text-value-display">#EBEEF0</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-200); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-200</p>
+                    <p class="text-value-display">#D8DDE1</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-300); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-300</p>
+                    <p class="text-value-display">#C4CBD2</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-400); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-400</p>
+                    <p class="text-value-display">#B1B9C3</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-500); color: var(--color-neutral-0)">Base</div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-500</p>
+                    <p class="text-value-display">#8F9CAA</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-600); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-600</p>
+                    <p class="text-value-display">#798591</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-700); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-700</p>
+                    <p class="text-value-display">#636E78</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-800); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-800</p>
+                    <p class="text-value-display">#4D575F</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-secondary-900); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-secondary-900</p>
+                    <p class="text-value-display">#374046</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Accent Colors -->
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Accent Palette</h3>
+              <div class="color-palette-grid">
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-50); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-50</p>
+                    <p class="text-value-display">#EAF6F5</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-100); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-100</p>
+                    <p class="text-value-display">#D5EDE9</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-200); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-200</p>
+                    <p class="text-value-display">#ABDBCF</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-300); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-300</p>
+                    <p class="text-value-display">#82C9B6</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-400); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-400</p>
+                    <p class="text-value-display">#58B79C</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-500); color: var(--color-neutral-0)">Base</div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-500</p>
+                    <p class="text-value-display">#2FA482</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-600); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-600</p>
+                    <p class="text-value-display">#288A6E</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-700); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-700</p>
+                    <p class="text-value-display">#20705A</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-800); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-800</p>
+                    <p class="text-value-display">#185646</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-accent-900); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-accent-900</p>
+                    <p class="text-value-display">#103C32</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Neutral Colors -->
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Neutral Palette (GlideUI Core)</h3>
+              <div class="color-palette-grid">
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-0); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-0</p>
+                    <p class="text-value-display">#FFFFFF</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-50); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-50</p>
+                    <p class="text-value-display">#F8F9FA</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-100); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-100</p>
+                    <p class="text-value-display">#F1F3F5</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-200); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-200</p>
+                    <p class="text-value-display">#E9ECEF</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-300); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-300</p>
+                    <p class="text-value-display">#DEE2E6</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-400); color: var(--color-neutral-800)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-400</p>
+                    <p class="text-value-display">#CED4DA</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-500); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-500</p>
+                    <p class="text-value-display">#ADB5BD</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-600); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-600</p>
+                    <p class="text-value-display">#868E96</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-700); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-700</p>
+                    <p class="text-value-display">#495057</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-800); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-800</p>
+                    <p class="text-value-display">#343A40</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-900); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-900</p>
+                    <p class="text-value-display">#212529</p>
+                  </div>
+                </div>
+                <div class="color-swatch-wrapper">
+                  <div class="color-swatch" style="background-color: var(--color-neutral-1000); color: var(--color-neutral-0)"></div>
+                  <div class="swatch-info">
+                    <p class="font-medium">--color-neutral-1000</p>
+                    <p class="text-value-display">#000000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Semantic Colors -->
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Semantic Colors</h3>
+              <p class="themed-color-note">
+                The Semantic colors below use abstract placeholder colors. These are intended to be subtly adjusted by specific project themes if strong brand alignment is needed, while maintaining their core meaning. Examples show typical usage for
+                alert-style components.
+              </p>
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-l)">
+                <div class="semantic-category">
+                  <h4>Success</h4>
+                  <div class="semantic-example-element" style="background-color: var(--color-semantic-success-background); color: var(--color-semantic-success-text); border-color: var(--color-semantic-success-border)">Success Example</div>
+                  <div class="semantic-variable-list">
+                    <p><code>--color-semantic-success-background:</code> <span class="text-value-display">#E8F5E9</span></p>
+                    <p><code>--color-semantic-success-text:</code> <span class="text-value-display">#2A573F</span></p>
+                    <p><code>--color-semantic-success-border:</code> <span class="text-value-display">#A5D6A7</span></p>
+                    <p><code>--color-semantic-success-base (Base):</code> <span class="text-value-display">#6BBF70</span></p>
+                  </div>
+                </div>
+
+                <div class="semantic-category">
+                  <h4>Warning</h4>
+                  <div class="semantic-example-element" style="background-color: var(--color-semantic-warning-background); color: var(--color-semantic-warning-text); border-color: var(--color-semantic-warning-border)">Warning Example</div>
+                  <div class="semantic-variable-list">
+                    <p><code>--color-semantic-warning-background:</code> <span class="text-value-display">#FFF8E1</span></p>
+                    <p><code>--color-semantic-warning-text:</code> <span class="text-value-display">#854D0E</span></p>
+                    <p><code>--color-semantic-warning-border:</code> <span class="text-value-display">#FFCC80</span></p>
+                    <p><code>--color-semantic-warning-base (Base):</code> <span class="text-value-display">#FFB74D</span></p>
+                  </div>
+                </div>
+
+                <div class="semantic-category">
+                  <h4>Error/Danger</h4>
+                  <div class="semantic-example-element" style="background-color: var(--color-semantic-error-background); color: var(--color-semantic-error-text); border-color: var(--color-semantic-error-border)">Error/Danger Example</div>
+                  <div class="semantic-variable-list">
+                    <p><code>--color-semantic-error-background:</code> <span class="text-value-display">#FFEBEE</span></p>
+                    <p><code>--color-semantic-error-text:</code> <span class="text-value-display">#B71C1C</span></p>
+                    <p><code>--color-semantic-error-border:</code> <span class="text-value-display">#EF9A9A</span></p>
+                    <p><code>--color-semantic-error-base (Base):</code> <span class="text-value-display">#E57373</span></p>
+                  </div>
+                </div>
+
+                <div class="semantic-category">
+                  <h4>Information</h4>
+                  <div class="semantic-example-element" style="background-color: var(--color-semantic-info-background); color: var(--color-semantic-info-text); border-color: var(--color-semantic-info-border)">Information Example</div>
+                  <div class="semantic-variable-list">
+                    <p><code>--color-semantic-info-background:</code> <span class="text-value-display">#E3F2FD</span></p>
+                    <p><code>--color-semantic-info-text:</code> <span class="text-value-display">#1976D2</span></p>
+                    <p><code>--color-semantic-info-border:</code> <span class="text-value-display">#90CAF9</span></p>
+                    <p><code>--color-semantic-info-base (Base):</code> <span class="text-value-display">#64B5F6</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Spacing Section -->
+          <section id="section-spacing">
+            <h2>Spacing</h2>
+            <p style="margin-bottom: var(--space-l)">Base unit: 8px. Values are provided in CSS variables, pixel equivalents, and rem units (assuming 1rem = 16px).</p>
+            <div class="spacing-table-wrapper">
+              <table class="spacing-table">
+                <thead>
+                  <tr>
+                    <th>Variable</th>
+                    <th>Pixels (px)</th>
+                    <th>Rems</th>
+                    <th>Sample</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>--space-xxs</td>
+                    <td>4px</td>
+                    <td>0.25rem</td>
+                    <td><div class="spacing-sample" style="height: 4px; width: 4px; line-height: 4px">4px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-xs</td>
+                    <td>8px</td>
+                    <td>0.5rem</td>
+                    <td><div class="spacing-sample" style="height: 8px; width: 8px; line-height: 8px">8px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-s</td>
+                    <td>12px</td>
+                    <td>0.75rem</td>
+                    <td><div class="spacing-sample" style="height: 12px; width: 12px; line-height: 12px">12px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-m</td>
+                    <td>16px</td>
+                    <td>1rem</td>
+                    <td><div class="spacing-sample" style="height: 16px; width: 16px; line-height: 16px">16px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-l</td>
+                    <td>24px</td>
+                    <td>1.5rem</td>
+                    <td><div class="spacing-sample" style="height: 24px; width: 24px; line-height: 24px">24px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-xl</td>
+                    <td>32px</td>
+                    <td>2rem</td>
+                    <td><div class="spacing-sample" style="height: 32px; width: 32px; line-height: 32px">32px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-2xl</td>
+                    <td>40px</td>
+                    <td>2.5rem</td>
+                    <td><div class="spacing-sample" style="height: 40px; width: 40px; line-height: 40px">40px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-3xl</td>
+                    <td>48px</td>
+                    <td>3rem</td>
+                    <td><div class="spacing-sample" style="height: 48px; width: 48px; line-height: 48px">48px</div></td>
+                  </tr>
+                  <tr>
+                    <td>--space-4xl</td>
+                    <td>64px</td>
+                    <td>4rem</td>
+                    <td><div class="spacing-sample" style="height: 64px; width: 64px; line-height: 64px">64px</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Layout & Grid System Section -->
+          <section id="section-layout">
+            <h2>Layout & Grid System</h2>
+            <p style="margin-bottom: var(--space-l)">A 12-column responsive grid system for structuring page layouts. Uses a flexbox-based approach.</p>
+
+            <h3>Grid Overview</h3>
+            <p>The grid is composed of containers, rows, and columns. Content should be placed within columns, and columns must be immediate children of rows.</p>
+            <ul>
+              <li><code>.glide-container</code>: Wraps rows. Manages max-width and centering. Has horizontal padding.</li>
+              <li><code>.glide-row</code>: Wrapper for columns. Uses flexbox to arrange columns.</li>
+              <li><code>.glide-col-*</code>: Defines column widths. From <code>.glide-col-1</code> to <code>.glide-col-12</code>.</li>
+              <li>Responsive Columns: <code>.glide-col-sm-*</code>, <code>.glide-col-md-*</code>, <code>.glide-col-lg-*</code>, <code>.glide-col-xl-*</code>, <code>.glide-col-xxl-*</code> for different breakpoints.</li>
+            </ul>
+
+            <h3>Breakpoints</h3>
+            <table class="spacing-table">
+              <thead>
+                <tr>
+                  <th>Prefix</th>
+                  <th>Min-width</th>
+                  <th>Container Max-width</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>(none) - Mobile First</td>
+                  <td>0px</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>sm</td>
+                  <td>576px (<code>--breakpoint-sm</code>)</td>
+                  <td>540px (<code>--container-max-width-sm</code>)</td>
+                </tr>
+                <tr>
+                  <td>md</td>
+                  <td>768px (<code>--breakpoint-md</code>)</td>
+                  <td>720px (<code>--container-max-width-md</code>)</td>
+                </tr>
+                <tr>
+                  <td>lg</td>
+                  <td>992px (<code>--breakpoint-lg</code>)</td>
+                  <td>960px (<code>--container-max-width-lg</code>)</td>
+                </tr>
+                <tr>
+                  <td>xl</td>
+                  <td>1200px (<code>--breakpoint-xl</code>)</td>
+                  <td>1140px (<code>--container-max-width-xl</code>)</td>
+                </tr>
+                <tr>
+                  <td>xxl</td>
+                  <td>1400px (<code>--breakpoint-xxl</code>)</td>
+                  <td>1320px (<code>--container-max-width-xxl</code>)</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>Default Gutter Width: <code>var(--grid-gutter-width)</code> (24px)</p>
+
+            <h4>Example: Equal Width Columns</h4>
+            <div class="glide-container" style="background-color: var(--color-neutral-100); margin-bottom: var(--space-l)">
+              <div class="glide-row">
+                <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
+                <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
+                <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
+              </div>
+              <div class="glide-row">
+                <div class="glide-col-6"><div class="grid-example-col">.glide-col-6</div></div>
+                <div class="glide-col-6"><div class="grid-example-col">.glide-col-6</div></div>
+              </div>
+            </div>
+
+            <h4>Example: Responsive Columns</h4>
+            <p>These columns will stack on small screens, then adjust at medium and large breakpoints.</p>
+            <div class="glide-container" style="background-color: var(--color-neutral-100); margin-bottom: var(--space-l)">
+              <div class="glide-row">
+                <div class="glide-col-12 glide-col-md-6 glide-col-lg-4"><div class="grid-example-col">Col 1 (12, md-6, lg-4)</div></div>
+                <div class="glide-col-12 glide-col-md-6 glide-col-lg-4"><div class="grid-example-col">Col 2 (12, md-6, lg-4)</div></div>
+                <div class="glide-col-12 glide-col-md-12 glide-col-lg-4"><div class="grid-example-col">Col 3 (12, md-12, lg-4)</div></div>
+              </div>
+            </div>
+            <p class="text-small">Resize your browser window to see the responsive behavior.</p>
+          </section>
+
+          <!-- Borders Section -->
+          <section id="section-borders">
+            <h2>Borders</h2>
+            <p style="margin-bottom: var(--space-l)">Defines standard border properties. Specific border colors can be themed using neutral or brand color palettes.</p>
+
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Border Properties</h3>
+              <table class="spacing-table">
+                <thead>
+                  <tr>
+                    <th>Variable</th>
+                    <th>Value</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--border-width-thin</code></td>
+                    <td>1px</td>
+                    <td>Standard default border width.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-width-medium</code></td>
+                    <td>2px</td>
+                    <td>For focus states or emphasis.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-style-default</code></td>
+                    <td>solid</td>
+                    <td>Recommended style for most UI borders.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-border-default</code></td>
+                    <td>var(--color-neutral-300)</td>
+                    <td>Default border color (placeholder: #DEE2E6). Themeable.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-border-subtle</code></td>
+                    <td>var(--color-neutral-200)</td>
+                    <td>For very light borders (placeholder: #E9ECEF). Themeable.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-border-strong</code></td>
+                    <td>var(--color-neutral-400)</td>
+                    <td>For more prominent borders (placeholder: #CED4DA). Themeable.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--color-border-interactive</code></td>
+                    <td>var(--color-primary-500)</td>
+                    <td>For interactive elements like focus states (placeholder: #32A9DD). Themeable.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Border Examples</h3>
+            <div class="border-example-grid">
+              <div class="border-example-item" style="border: var(--border-width-thin) var(--border-style-default) var(--color-border-default)">Thin Default Border</div>
+              <div class="border-example-item" style="border: var(--border-width-medium) var(--border-style-default) var(--color-border-strong)">Medium Strong Border</div>
+              <div class="border-example-item" style="border: var(--border-width-medium) var(--border-style-default) var(--color-border-interactive)">Medium Interactive Border</div>
+              <div class="border-example-item" style="border-top: var(--border-width-thin) var(--border-style-default) var(--color-border-subtle); padding-top: calc(var(--space-m) - var(--border-width-thin))">Subtle Top Border (Divider)</div>
+            </div>
+            <p>Semantic borders are demonstrated in the Semantic Colors section (e.g., <code>--color-semantic-success-border</code>).</p>
+          </section>
+
+          <!-- Corner Radii Section -->
+          <section id="section-radii">
+            <h2>Corner Radii</h2>
+            <p style="margin-bottom: var(--space-l)">Defines standard corner radius values for creating rounded elements like buttons, cards, and inputs.</p>
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Radius Properties</h3>
+              <table class="spacing-table">
+                <thead>
+                  <tr>
+                    <th>Variable</th>
+                    <th>Value</th>
+                    <th>Typical Use Case</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--border-radius-none</code></td>
+                    <td>0px</td>
+                    <td>No rounding, sharp edges.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-xs</code></td>
+                    <td>2px</td>
+                    <td>Subtle rounding for small elements or tags.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-sm</code></td>
+                    <td>4px</td>
+                    <td>Subtle rounding for small elements or tags.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-md</code></td>
+                    <td>8px</td>
+                    <td>Common default for buttons, inputs, cards.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-lg</code></td>
+                    <td>16px</td>
+                    <td>More pronounced rounding for larger cards or containers.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-xl</code></td>
+                    <td>24px</td>
+                    <td>Softer, more modern feel for larger elements.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-pill</code></td>
+                    <td>9999px</td>
+                    <td>Creates pill-shaped buttons or elements.</td>
+                  </tr>
+                  <tr>
+                    <td><code>--border-radius-circle</code></td>
+                    <td>50%</td>
+                    <td>Creates perfect circles (for square elements).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Radius Examples</h3>
+            <div class="radius-example-grid">
+              <div class="radius-example-item" style="border-radius: var(--border-radius-none)">None (0px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-xs)">Extra Small (2px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-sm)">Small (4px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-md)">Medium (8px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-lg)">Large (16px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-xl)">X-Large (24px)</div>
+              <div class="radius-example-item" style="border-radius: var(--border-radius-pill)">Pill (9999px)</div>
+              <div class="radius-example-item" style="width: 80px; border-radius: var(--border-radius-circle)">Circle (50%)</div>
+            </div>
+          </section>
+
+          <!-- Shadows Section -->
+          <section id="section-shadows">
+            <h2>Shadows</h2>
+            <p style="margin-bottom: var(--space-l)">Provides a set of standardized shadows for creating depth and elevation in the UI. The base shadow color is themeable.</p>
+            <div style="margin-bottom: var(--space-xl)">
+              <h3>Shadow Properties</h3>
+              <table class="spacing-table">
+                <thead>
+                  <tr>
+                    <th>Variable</th>
+                    <th>CSS <code>box-shadow</code> Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>--shadow-color</code></td>
+                    <td>rgba(0, 0, 0, 0.1)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-color-strong</code></td>
+                    <td>rgba(0, 0, 0, 0.15)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-sm</code></td>
+                    <td>0 1px 2px 0 var(--shadow-color)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-md</code></td>
+                    <td>0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px rgba(0,0,0,0.06)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-lg</code></td>
+                    <td>0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px rgba(0,0,0,0.05)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-xl</code></td>
+                    <td>0 20px 25px -5px var(--shadow-color-strong), 0 10px 10px -5px rgba(0,0,0,0.04)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-inner</code></td>
+                    <td>inset 0 2px 4px 0 var(--shadow-color)</td>
+                  </tr>
+                  <tr>
+                    <td><code>--shadow-none</code></td>
+                    <td>none</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>Shadow Examples</h3>
+            <div class="shadow-example-grid">
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-sm)">Small Shadow</div>
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-md)">Medium Shadow</div>
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-lg)">Large Shadow</div>
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-xl)">X-Large Shadow</div>
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-inner)">Inner Shadow</div>
+              <div class="shadow-example-item" style="box-shadow: var(--shadow-none)">No Shadow</div>
+            </div>
+          </section>
+
+          <!-- Iconography Section -->
+          <section id="section-iconography">
+            <h2>Iconography</h2>
+            <p style="margin-bottom: var(--space-l)">GlideUI uses inline SVG for icons to allow for maximum flexibility in styling with CSS. The <code>.icon</code> class provides base sizing and stroke properties.</p>
+
+            <h4>Basic Usage & Sizing</h4>
+            <div class="button-showcase">
+              <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <svg class="icon icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+
+            <h4>Coloring Icons</h4>
+            <p style="margin-bottom: var(--space-m)">Icons inherit the text color of their parent element (<code>stroke: currentColor</code>).</p>
+            <div class="button-showcase">
+              <span style="color: var(--color-primary-500)">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span style="color: var(--color-semantic-success-base)">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </span>
+              <span style="color: var(--color-semantic-error-base)">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+              </span>
+            </div>
+
+            <h4>Icons in Buttons</h4>
+            <div class="button-showcase">
+              <button class="btn btn-primary">
+                <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Confirm</span>
+              </button>
+              <button class="btn btn-secondary">
+                <span>Settings</span>
+                <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <!-- Buttons Section -->
+          <section id="section-buttons">
+            <h2>Buttons</h2>
+            <p style="margin-bottom: var(--space-l)">Defines core button styles and variants. Button colors are themeable using the Primary and Neutral color palettes.</p>
+
+            <h4>Button Sizes</h4>
+            <div class="button-showcase">
+              <button type="button" class="btn btn-primary btn-sm">Small Primary</button>
+              <button type="button" class="btn btn-primary">Medium Primary</button>
+              <button type="button" class="btn btn-primary btn-lg">Large Primary</button>
+            </div>
+            <div class="button-showcase">
+              <button type="button" class="btn btn-secondary btn-sm">Small Secondary</button>
+              <button type="button" class="btn btn-secondary">Medium Secondary</button>
+              <button type="button" class="btn btn-secondary btn-lg">Large Secondary</button>
+            </div>
+            <div class="button-showcase" style="margin-bottom: var(--space-xl)">
+              <button type="button" class="btn btn-text btn-sm">Small Text</button>
+              <button type="button" class="btn btn-text">Medium Text</button>
+              <button type="button" class="btn btn-text btn-lg">Large Text</button>
+            </div>
+
+            <h4>Base Button Styles & Disabled States</h4>
+            <div class="button-showcase">
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-secondary">Secondary</button>
+              <button type="button" class="btn btn-text">Text Button</button>
+            </div>
+            <div class="button-showcase">
+              <button type="button" class="btn btn-primary" disabled>Primary Disabled</button>
+              <button type="button" class="btn btn-secondary" disabled>Secondary Disabled</button>
+              <button type="button" class="btn btn-text" disabled>Text Disabled</button>
+            </div>
+
+            <div style="margin-top: var(--space-xl)">
+              <h3>Button States Showcase</h3>
+              <p class="text-small" style="margin-bottom: var(--space-s)">The following buttons are styled to permanently represent their states for demonstration. Actual states are interactive.</p>
+
+              <p class="button-group-title">Primary States:</p>
+              <div class="button-showcase">
+                <button type="button" class="btn btn-primary">Default</button>
+                <button type="button" class="btn btn-primary simulate-hover">Hover</button>
+                <button type="button" class="btn btn-primary simulate-active">Active</button>
+                <button type="button" class="btn btn-primary simulate-focus">Focus</button>
+              </div>
+
+              <p class="button-group-title">Secondary States:</p>
+              <div class="button-showcase">
+                <button type="button" class="btn btn-secondary">Default</button>
+                <button type="button" class="btn btn-secondary simulate-hover">Hover</button>
+                <button type="button" class="btn btn-secondary simulate-active">Active</button>
+                <button type="button" class="btn btn-secondary simulate-focus">Focus</button>
+              </div>
+
+              <p class="button-group-title">Text States:</p>
+              <div class="button-showcase">
+                <button type="button" class="btn btn-text">Default</button>
+                <button type="button" class="btn btn-text simulate-hover">Hover</button>
+                <button type="button" class="btn btn-text simulate-active">Active</button>
+                <button type="button" class="btn btn-text simulate-focus">Focus</button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Form Inputs Section -->
+          <section id="section-forms">
+            <h2>Form Inputs</h2>
+            <p style="margin-bottom: var(--space-l)">Defines styles for common form input elements. These are designed to be clear, accessible, and themeable.</p>
+
+            <h4>Text Input & Textarea</h4>
+            <div class="form-group">
+              <label for="text-input-default" class="form-label">Default Text Input</label>
+              <input type="text" id="text-input-default" class="form-input" placeholder="Enter text here..." />
+            </div>
+            <div class="form-group">
+              <label for="text-input-focus" class="form-label">Focus State (click me)</label>
+              <input type="text" id="text-input-focus" class="form-input" placeholder="Focus on me" />
+            </div>
+            <div class="form-group">
+              <label for="text-input-disabled" class="form-label">Disabled Text Input</label>
+              <input type="text" id="text-input-disabled" class="form-input" placeholder="Disabled" disabled />
+            </div>
+            <div class="form-group">
+              <label for="textarea-default" class="form-label">Default Textarea</label>
+              <textarea id="textarea-default" class="form-textarea" rows="4" placeholder="Enter multiple lines of text..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="text-input-helper" class="form-label">Input with Helper</label>
+              <input type="text" id="text-input-helper" class="form-input" placeholder="Helper text below" />
+              <span class="form-helper-text">This is some helpful information about the input.</span>
+            </div>
+            <div class="form-group">
+              <label for="text-input-error" class="form-label">Input with Error</label>
+              <input type="text" id="text-input-error" class="form-input is-error" value="Invalid input" aria-describedby="text-input-error-msg" />
+              <span id="text-input-error-msg" class="form-helper-text is-error">This field has an error.</span>
+            </div>
+            <div class="form-group">
+              <label for="text-input-success" class="form-label">Input with Success</label>
+              <input type="text" id="text-input-success" class="form-input is-success" value="Looks good!" aria-describedby="text-input-success-msg" />
+              <span id="text-input-success-msg" class="form-helper-text is-success">Your input is valid.</span>
+            </div>
+
+            <h4>Selection Controls</h4>
+            <div class="form-group">
+              <p class="form-label" style="margin-bottom: var(--space-s)">Checkboxes</p>
+              <label class="form-control-custom">
+                <input type="checkbox" name="checkbox-group" id="cb-1" checked />
+                <span class="control-indicator"></span>
+                <span>Option 1 (checked)</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="checkbox" name="checkbox-group" id="cb-2" />
+                <span class="control-indicator"></span>
+                <span>Option 2</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="checkbox" name="checkbox-group" id="cb-3" disabled />
+                <span class="control-indicator"></span>
+                <span>Option 3 (disabled)</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="checkbox" name="checkbox-group" id="cb-4" checked disabled />
+                <span class="control-indicator"></span>
+                <span>Option 4 (checked & disabled)</span>
+              </label>
+            </div>
+
+            <div class="form-group">
+              <p class="form-label" style="margin-bottom: var(--space-s)">Radio Buttons</p>
+              <label class="form-control-custom">
+                <input type="radio" name="radio-group" id="rb-1" checked />
+                <span class="control-indicator"></span>
+                <span>Choice A (selected)</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="radio" name="radio-group" id="rb-2" />
+                <span class="control-indicator"></span>
+                <span>Choice B</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="radio" name="radio-group" id="rb-3" disabled />
+                <span class="control-indicator"></span>
+                <span>Choice C (disabled)</span>
+              </label>
+              <label class="form-control-custom">
+                <input type="radio" name="radio-group-disabled-checked" id="rb-4" checked disabled />
+                <span class="control-indicator"></span>
+                <span>Choice D (selected & disabled)</span>
+              </label>
+            </div>
+
+            <h4>Select Dropdown</h4>
+            <div class="form-group">
+              <label for="select-default" class="form-label">Default Select</label>
+              <select id="select-default" class="form-select">
+                <option>Please select an option...</option>
+                <option value="1">Option One</option>
+                <option value="2">Option Two has longer text</option>
+                <option value="3">Option Three</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="select-disabled" class="form-label">Disabled Select</label>
+              <select id="select-disabled" class="form-select" disabled>
+                <option>Disabled dropdown</option>
+                <option value="1">Option One</option>
+              </select>
+            </div>
+          </section>
+
+          <!-- Alerts Section -->
+          <section id="section-alerts">
+            <h2>Alerts / Notifications</h2>
+            <p style="margin-bottom: var(--space-l)">Provides feedback messages for typical user actions, using semantic colors.</p>
+            <div class="alert alert-success"><strong class="alert-title">Success!</strong> Your action was completed successfully.</div>
+            <div class="alert alert-info"><strong class="alert-title">Information:</strong> Here is some useful information for you.</div>
+            <div class="alert alert-warning"><strong class="alert-title">Warning:</strong> Please be aware of this potential issue.</div>
+            <div class="alert alert-error"><strong class="alert-title">Error!</strong> An error occurred while processing your request.</div>
+          </section>
+
+          <!-- Cards Section -->
+          <section id="section-cards">
+            <h2>Cards</h2>
+            <p style="margin-bottom: var(--space-l)">Cards are flexible content containers.</p>
+            <div class="card">
+              <div class="card-header">
+                <h3>Card Title</h3>
+              </div>
+              <div class="card-body">
+                <p>This is the main content of the card. It can contain text, images, lists, and other elements. We are using our defined padding and typography.</p>
+                <p>Another paragraph to show spacing within the card body.</p>
+              </div>
+              <div class="card-footer">
+                <button type="button" class="btn btn-primary">Action 1</button>
+                <button type="button" class="btn btn-text">Action 2</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h4>Card with Body Only</h4>
+                <p>This card only has a body section, demonstrating a simpler use case. It still uses the standard card styling for background, border, radius, and shadow.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tables Section -->
+          <section id="section-tables">
+            <h2>Tables</h2>
+            <p style="margin-bottom: var(--space-l)">Basic styling for data tables.</p>
+            <div class="table-wrapper">
+              <table class="glide-table">
+                <thead>
+                  <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                    <th>Header 4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Data Cell 1.1</td>
+                    <td>Data Cell 1.2</td>
+                    <td>Data Cell 1.3</td>
+                    <td>Data Cell 1.4</td>
+                  </tr>
+                  <tr>
+                    <td>Data Cell 2.1</td>
+                    <td>Data Cell 2.2 with longer content</td>
+                    <td>Data Cell 2.3</td>
+                    <td>Data Cell 2.4</td>
+                  </tr>
+                  <tr>
+                    <td>Data Cell 3.1</td>
+                    <td>Data Cell 3.2</td>
+                    <td>Data Cell 3.3</td>
+                    <td>Data Cell 3.4</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- Navigation Elements Section -->
+          <section id="section-navigation">
+            <h2>Navigation Elements</h2>
+            <p style="margin-bottom: var(--space-l)">Basic structures for common navigation patterns.</p>
+
+            <h4>Navbar (Basic Example)</h4>
+            <nav class="navbar">
+              <a href="#" class="navbar-brand">GlideLogo</a>
+              <ul class="navbar-nav">
+                <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+              </ul>
+            </nav>
+
+            <h4 style="margin-top: var(--space-2xl)">Tabs (Basic Example)</h4>
+            <div>
+              <div class="tab-nav">
+                <button type="button" class="tab-link active" data-tab-target="#tab1-content-interactive">Tab One</button>
+                <button type="button" class="tab-link" data-tab-target="#tab2-content-interactive">Tab Two</button>
+                <button type="button" class="tab-link" data-tab-target="#tab3-content-interactive">Tab Three</button>
+              </div>
+              <div class="tab-content-wrapper">
+                <div id="tab1-content-interactive" class="tab-pane active">
+                  <h5>Content for Tab One</h5>
+                  <p>This is the content shown for the first tab. It can be any HTML content you need.</p>
+                </div>
+                <div id="tab2-content-interactive" class="tab-pane">
+                  <h5>Content for Tab Two</h5>
+                  <p>This is some different content for the second tab, demonstrating how tabs can switch views.</p>
+                </div>
+                <div id="tab3-content-interactive" class="tab-pane">
+                  <h5>Content for Tab Three</h5>
+                  <p>And finally, the content for the third tab panel.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Modals Section -->
+          <section id="section-modals">
+            <h2>Modals / Dialogs</h2>
+            <p style="margin-bottom: var(--space-l)">Modals are used to display focused content or require user interaction.</p>
+
+            <button type="button" class="btn btn-primary" data-modal-trigger="sample-modal-interactive">Open Modal Example</button>
+
+            <div id="sample-modal-interactive" class="modal-overlay">
+              <div class="modal-content" role="dialog" aria-labelledby="modal-title-1" aria-modal="true">
+                <div class="modal-header">
+                  <h3 id="modal-title-1">Modal Title</h3>
+                  <button type="button" class="modal-close-button" data-modal-close aria-label="Close modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <p>This is the main content of the modal. It can contain forms, information, or any other elements needed for the interaction.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent Rerum harum ipsam maiores doloremque, quos, quae eaque perferendis necessitatibus dicta mollitia.</p>
+                  <input type="text" class="form-input" placeholder="Test input for focus trap" />
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-modal-close>Cancel</button>
+                  <button type="button" class="btn btn-primary" data-modal-close>Confirm Action</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Tooltips Section (HTML for trigger and tooltip remains, JS interaction note added) -->
+          <section id="section-modals">
+            <h2>Tooltips (GlideUI Core)</h2>
+            <p style="margin-bottom: var(--space-l)">Tooltips provide contextual information on hover or focus. <em>Current implementation is CSS-only for hover/focus. JavaScript can enhance behavior (e.g., click to toggle, positioning).</em></p>
+            <div class="button-showcase">
+              <div class="tooltip-container">
+                <button type="button" class="btn btn-primary tooltip-trigger" aria-describedby="tooltip1-interactive">Hover for Tooltip</button>
+                <span class="tooltip-text" id="tooltip1-interactive" role="tooltip">This is a helpful tooltip!</span>
+              </div>
+
+              <div class="tooltip-container" style="margin-left: var(--space-4xl)">
+                <span class="tooltip-trigger" tabindex="0" style="border-bottom: 1px dashed var(--color-neutral-500); cursor: help" aria-describedby="tooltip2-interactive">Focus or Hover Text </span>
+                <span class="tooltip-text" id="tooltip2-interactive" role="tooltip">More details about this text.</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Dropdown Menus Section -->
+          <section id="section-dropdowns">
+            <h2>Dropdown Menus</h2>
+            <p style="margin-bottom: var(--space-l)">Dropdown menus provide a list of actions or links.</p>
+
+            <h4>Interactive Dropdown Example</h4>
+            <div class="dropdown" style="margin-bottom: var(--space-l); display: inline-block">
+              <button type="button" class="btn btn-secondary dropdown-trigger" aria-haspopup="true" aria-expanded="false">Dropdown Menu</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><h6 class="dropdown-header">Dropdown header</h6></li>
+                <li><a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Disabled link</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
               </ul>
             </div>
-          </div>
+          </section>
+
+          <!-- Accordions Section -->
+          <section id="section-accordions">
+            <h2>Accordions / Collapsible Sections</h2>
+            <p style="margin-bottom: var(--space-l)">Accordions allow content to be shown or hidden.</p>
+            <div class="accordion">
+              <div class="accordion-item">
+                <button type="button" class="accordion-header" aria-expanded="false">
+                  <span>Accordion Item #1</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                  <p>This is the content for the first accordion item. It can be any HTML content you need.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="accordion-header" aria-expanded="false">
+                  <span>Accordion Item #2</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                  <p>This is the content for the second accordion item. It is hidden by default.</p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <button type="button" class="accordion-header" aria-expanded="false">
+                  <span>Accordion Item #3</span>
+                  <span class="accordion-icon">+</span>
+                </button>
+                <div class="accordion-content">
+                  <p>Content for the third item goes here. It can be longer and include various HTML elements.</p>
+                  <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Badges/Pills Section -->
+          <section id="section-badges">
+            <h2>Badges / Pills</h2>
+            <p style="margin-bottom: var(--space-l)">Badges (or pills) are small elements used for counts, statuses, or labels.</p>
+            <div class="button-showcase">
+              <span class="badge">Default</span>
+              <span class="badge badge-primary">Primary</span>
+              <span class="badge badge-success">Success</span>
+              <span class="badge badge-error">Error</span>
+              <span class="badge badge-warning">Warning</span>
+              <span class="badge badge-info">Info</span>
+            </div>
+            <div class="button-showcase" style="margin-top: var(--space-m)">
+              <span class="badge" style="border-radius: var(--border-radius-md)">Square Badge</span>
+              <span class="badge badge-primary">New <span class="badge" style="background-color: var(--color-neutral-0); color: var(--color-primary-500); margin-left: var(--space-xs); padding: 2px 4px; font-size: 0.8em">2</span></span>
+            </div>
+          </section>
+
+          <!-- Progress Bars Section -->
+          <section id="section-progress">
+            <h2>Progress Bars</h2>
+            <p style="margin-bottom: var(--space-l)">Progress bars indicate the completion status of a task.</p>
+
+            <h4>Basic Progress Bar</h4>
+            <div class="progress" style="margin-bottom: var(--space-s)">
+              <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+            </div>
+
+            <h4>Striped Progress Bar</h4>
+            <div class="progress" style="margin-bottom: var(--space-s)">
+              <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%; background-color: var(--color-semantic-success-base)" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+
+            <h4>Animated Striped Progress Bar</h4>
+            <div class="progress" style="margin-bottom: var(--space-s)">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%; background-color: var(--color-semantic-info-base)" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <p class="text-small">Text inside progress bars is optional and might require additional styling for contrast and placement depending on the bar's fill percentage.</p>
+          </section>
+
+          <!-- Loaders/Spinners Section -->
+          <section id="section-loaders">
+            <h2>Loaders / Spinners</h2>
+            <p style="margin-bottom: var(--space-l)">Spinners provide visual feedback for loading states.</p>
+            <div class="button-showcase">
+              <div class="loader" title="Loading..."></div>
+              <div class="loader" style="width: var(--space-2xl); height: var(--space-2xl); --loader-border-width: 4px; --loader-color-primary: var(--color-accent-500)"></div>
+              <div class="loader" style="width: var(--space-3xl); height: var(--space-3xl); --loader-border-width: 5px; --loader-color-primary: var(--color-semantic-error-base)"></div>
+            </div>
+          </section>
+
+          <section id="#section-additional">
+            <h2>Additional Components</h2>
+            <p style="margin-bottom: var(--space-l)">A collection of other common UI components.</p>
+
+            <h3>Chips / Tags</h3>
+            <p>Chips are compact elements representing an input, attribute, or action.</p>
+            <div class="button-showcase">
+              <span class="chip">Default Chip</span>
+              <span class="chip chip-primary">Primary Chip</span>
+              <span class="chip chip-removable">
+                Removable Chip
+                <button type="button" class="chip-close" aria-label="Remove chip">&times;</button>
+              </span>
+              <span class="chip chip-primary chip-removable">
+                Primary Removable
+                <button type="button" class="chip-close" aria-label="Remove chip" style="color: var(--color-primary-700)">&times;</button>
+              </span>
+            </div>
+
+            <h3 style="margin-top: var(--space-2xl)">Pagination</h3>
+            <p>Pagination provides navigation between a series of related content pages.</p>
+            <nav class="pagination" aria-label="Page navigation">
+              <ul class="pagination-list">
+                <li class="pagination-item"><a class="pagination-link is-disabled" href="#" aria-label="Previous" tabindex="-1" aria-disabled="true">&laquo; Prev</a></li>
+                <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
+                <li class="pagination-item"><a class="pagination-link is-active" href="#" aria-current="page">2</a></li>
+                <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
+                <li class="pagination-item"><span class="pagination-ellipsis">&hellip;</span></li>
+                <li class="pagination-item"><a class="pagination-link" href="#">10</a></li>
+                <li class="pagination-item"><a class="pagination-link" href="#" aria-label="Next">Next &raquo;</a></li>
+              </ul>
+            </nav>
+
+            <h3 style="margin-top: var(--space-2xl)">Breadcrumbs</h3>
+            <p>Breadcrumbs provide secondary navigation to indicate the user's current location.</p>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Category</a></li>
+                <li class="breadcrumb-item is-active" aria-current="page">Current Page</li>
+              </ol>
+            </nav>
+
+            <h3 style="margin-top: var(--space-2xl)">Avatars</h3>
+            <p>Avatars are used to represent users or entities, typically with an image or initials.</p>
+            <div class="button-showcase">
+              <div class="avatar avatar-sm">JD</div>
+              <div class="avatar avatar-md">
+                <img src="https://placehold.co/48x48/EBF4FA/32A9DD?text=UI" alt="User Avatar" onerror="this.onerror=null; this.src='https://placehold.co/48x48/E9ECEF/868E96?text=??'; this.alt='Placeholder Avatar';" />
+              </div>
+              <div class="avatar avatar-lg" style="background-color: var(--color-accent-500); color: var(--color-neutral-0)">SG</div>
+              <div class="avatar avatar-md" style="border-radius: var(--border-radius-md)">S</div>
+            </div>
+          </section>
+
+          <!-- Utility Classes Section -->
+          <section id="#section-utilities">
+            <h2>Utility Classes</h2>
+            <p style="margin-bottom: var(--space-l)">A collection of helper classes for common styling needs.</p>
+
+            <h4>Text Alignment</h4>
+            <p class="u-text-left" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-left</code></p>
+            <p class="u-text-center" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-center</code></p>
+            <p class="u-text-right" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-right</code></p>
+
+            <h4>Display Properties</h4>
+            <div class="u-d-flex" style="gap: var(--space-m); margin-bottom: var(--space-s); align-items: flex-start">
+              <span class="u-d-block" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-block</code></span>
+              <span class="u-d-inline" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-inline</code></span>
+              <span class="u-d-inline-block" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-inline-block</code></span>
+            </div>
+            <p><code>.u-d-none</code> - <span class="u-d-none">This text should be hidden.</span> (Element is hidden)</p>
+
+            <h4>Visibility</h4>
+            <p><code>.u-hidden</code> - <span class="u-hidden">Hidden with display: none !important.</span></p>
+            <p><code>.u-sr-only</code> - <span class="u-sr-only">This text is only for screen readers.</span> (Visually hidden)</p>
+          </section>
+
+          <section id="#section-specialized">
+            <h2>Specialized Components</h2>
+            <p style="margin-bottom: var(--space-l)">More complex or specific components for various use cases.</p>
+
+            <h3>Sliders</h3>
+            <p>Sliders allow users to select a value from a range.</p>
+            <div class="slider-container">
+              <label for="slider-1" class="form-label">Volume: <span id="slider-value-1">50</span></label>
+              <input type="range" min="0" max="100" value="50" class="slider" id="slider-1" />
+            </div>
+
+            <h3 style="margin-top: var(--space-2xl)">Snackbars / Toasts</h3>
+            <p>Snackbars provide brief, temporary notifications. They appear at the bottom of the screen and disappear after a few seconds.</p>
+            <button type="button" class="btn btn-secondary" id="show-snackbar">Show Snackbar</button>
+            <div id="sample-snackbar" class="snackbar" role="alert">This is a snackbar notification!</div>
+
+            <h3 style="margin-top: var(--space-2xl)">Menus</h3>
+            <p>Menus are similar to dropdowns but are often used for context-specific actions and are not always attached to a button.</p>
+            <ul class="menu" style="display: inline-block; position: static">
+              <li><a class="menu-link" href="#">Action</a></li>
+              <li><a class="menu-link" href="#">Another action</a></li>
+              <li><hr class="menu-divider" /></li>
+              <li><span class="menu-item disabled">Disabled Item</span></li>
+            </ul>
+          </section>
+
+          <footer>
+            <p>&copy; <span id="currentYear"></span> GlideUI Design System. For internal use and reference.</p>
+          </footer>
         </div>
-      </section>
-
-      <!-- Badges/Pills Section -->
-      <section>
-        <h2>Badges / Pills</h2>
-        <p style="margin-bottom: var(--space-l)">Badges (or pills) are small elements used for counts, statuses, or labels.</p>
-        <div class="button-showcase">
-          <span class="badge">Default</span>
-          <span class="badge badge-primary">Primary</span>
-          <span class="badge badge-success">Success</span>
-          <span class="badge badge-error">Error</span>
-          <span class="badge badge-warning">Warning</span>
-          <span class="badge badge-info">Info</span>
-        </div>
-        <div class="button-showcase" style="margin-top: var(--space-m)">
-          <span class="badge" style="border-radius: var(--border-radius-md)">Square Badge</span>
-          <span class="badge badge-primary">New <span class="badge" style="background-color: var(--color-neutral-0); color: var(--color-primary-500); margin-left: var(--space-xs); padding: 2px 4px; font-size: 0.8em">2</span></span>
-        </div>
-      </section>
-
-      <!-- Progress Bars Section -->
-      <section>
-        <h2>Progress Bars</h2>
-        <p style="margin-bottom: var(--space-l)">Progress bars indicate the completion status of a task.</p>
-
-        <h4>Basic Progress Bar</h4>
-        <div class="progress" style="margin-bottom: var(--space-s)">
-          <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
-        </div>
-
-        <h4>Striped Progress Bar</h4>
-        <div class="progress" style="margin-bottom: var(--space-s)">
-          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%; background-color: var(--color-semantic-success-base)" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-
-        <h4>Animated Striped Progress Bar</h4>
-        <div class="progress" style="margin-bottom: var(--space-s)">
-          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 40%; background-color: var(--color-semantic-info-base)" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
-        <p class="text-small">Text inside progress bars is optional and might require additional styling for contrast and placement depending on the bar's fill percentage.</p>
-      </section>
-
-      <!-- Loaders/Spinners Section -->
-      <section>
-        <h2>Loaders / Spinners</h2>
-        <p style="margin-bottom: var(--space-l)">Spinners provide visual feedback for loading states.</p>
-        <div class="button-showcase">
-          <div class="loader" title="Loading..."></div>
-          <div class="loader" style="width: var(--space-2xl); height: var(--space-2xl); --loader-border-width: 4px; --loader-color-primary: var(--color-accent-500)"></div>
-          <div class="loader" style="width: var(--space-3xl); height: var(--space-3xl); --loader-border-width: 5px; --loader-color-primary: var(--color-semantic-error-base)"></div>
-        </div>
-      </section>
-
-      <!-- Layout & Grid System Section -->
-      <section>
-        <h2>Layout & Grid System</h2>
-        <p style="margin-bottom: var(--space-l)">A 12-column responsive grid system for structuring page layouts. Uses a flexbox-based approach.</p>
-
-        <h3>Grid Overview</h3>
-        <p>The grid is composed of containers, rows, and columns. Content should be placed within columns, and columns must be immediate children of rows.</p>
-        <ul>
-          <li><code>.glide-container</code>: Wraps rows. Manages max-width and centering. Has horizontal padding.</li>
-          <li><code>.glide-row</code>: Wrapper for columns. Uses flexbox to arrange columns.</li>
-          <li><code>.glide-col-*</code>: Defines column widths. From <code>.glide-col-1</code> to <code>.glide-col-12</code>.</li>
-          <li>Responsive Columns: <code>.glide-col-sm-*</code>, <code>.glide-col-md-*</code>, <code>.glide-col-lg-*</code>, <code>.glide-col-xl-*</code>, <code>.glide-col-xxl-*</code> for different breakpoints.</li>
-        </ul>
-
-        <h3>Breakpoints</h3>
-        <table class="spacing-table">
-          <thead>
-            <tr>
-              <th>Prefix</th>
-              <th>Min-width</th>
-              <th>Container Max-width</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>(none) - Mobile First</td>
-              <td>0px</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>sm</td>
-              <td>576px (<code>--breakpoint-sm</code>)</td>
-              <td>540px (<code>--container-max-width-sm</code>)</td>
-            </tr>
-            <tr>
-              <td>md</td>
-              <td>768px (<code>--breakpoint-md</code>)</td>
-              <td>720px (<code>--container-max-width-md</code>)</td>
-            </tr>
-            <tr>
-              <td>lg</td>
-              <td>992px (<code>--breakpoint-lg</code>)</td>
-              <td>960px (<code>--container-max-width-lg</code>)</td>
-            </tr>
-            <tr>
-              <td>xl</td>
-              <td>1200px (<code>--breakpoint-xl</code>)</td>
-              <td>1140px (<code>--container-max-width-xl</code>)</td>
-            </tr>
-            <tr>
-              <td>xxl</td>
-              <td>1400px (<code>--breakpoint-xxl</code>)</td>
-              <td>1320px (<code>--container-max-width-xxl</code>)</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>Default Gutter Width: <code>var(--grid-gutter-width)</code> (24px)</p>
-
-        <h4>Example: Equal Width Columns</h4>
-        <div class="glide-container" style="background-color: var(--color-neutral-100); margin-bottom: var(--space-l)">
-          <div class="glide-row">
-            <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
-            <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
-            <div class="glide-col-4"><div class="grid-example-col">.glide-col-4</div></div>
-          </div>
-          <div class="glide-row">
-            <div class="glide-col-6"><div class="grid-example-col">.glide-col-6</div></div>
-            <div class="glide-col-6"><div class="grid-example-col">.glide-col-6</div></div>
-          </div>
-        </div>
-
-        <h4>Example: Responsive Columns</h4>
-        <p>These columns will stack on small screens, then adjust at medium and large breakpoints.</p>
-        <div class="glide-container" style="background-color: var(--color-neutral-100); margin-bottom: var(--space-l)">
-          <div class="glide-row">
-            <div class="glide-col-12 glide-col-md-6 glide-col-lg-4"><div class="grid-example-col">Col 1 (12, md-6, lg-4)</div></div>
-            <div class="glide-col-12 glide-col-md-6 glide-col-lg-4"><div class="grid-example-col">Col 2 (12, md-6, lg-4)</div></div>
-            <div class="glide-col-12 glide-col-md-12 glide-col-lg-4"><div class="grid-example-col">Col 3 (12, md-12, lg-4)</div></div>
-          </div>
-        </div>
-        <p class="text-small">Resize your browser window to see the responsive behavior.</p>
-      </section>
-
-      <!-- Iconography Section -->
-      <section>
-        <h2>Iconography</h2>
-        <p style="margin-bottom: var(--space-l)">GlideUI uses inline SVG for icons to allow for maximum flexibility in styling with CSS. The <code>.icon</code> class provides base sizing and stroke properties.</p>
-
-        <h4>Basic Usage & Sizing</h4>
-        <div class="button-showcase">
-          <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-          <svg class="icon icon-lg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </div>
-
-        <h4>Coloring Icons</h4>
-        <p style="margin-bottom: var(--space-m)">Icons inherit the text color of their parent element (<code>stroke: currentColor</code>).</p>
-        <div class="button-showcase">
-          <span style="color: var(--color-primary-500)">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </span>
-          <span style="color: var(--color-semantic-success-base)">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-          </span>
-          <span style="color: var(--color-semantic-error-base)">
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="15" y1="9" x2="9" y2="15"></line>
-              <line x1="9" y1="9" x2="15" y2="15"></line>
-            </svg>
-          </span>
-        </div>
-
-        <h4>Icons in Buttons</h4>
-        <div class="button-showcase">
-          <button class="btn btn-primary">
-            <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Confirm</span>
-          </button>
-          <button class="btn btn-secondary">
-            <span>Settings</span>
-            <svg class="icon icon-sm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path
-                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </section>
-
-      <section>
-        <h2>Additional Components</h2>
-        <p style="margin-bottom: var(--space-l)">A collection of other common UI components.</p>
-
-        <h3>Chips / Tags</h3>
-        <p>Chips are compact elements representing an input, attribute, or action.</p>
-        <div class="button-showcase">
-          <span class="chip">Default Chip</span>
-          <span class="chip chip-primary">Primary Chip</span>
-          <span class="chip chip-removable">
-            Removable Chip
-            <button type="button" class="chip-close" aria-label="Remove chip">&times;</button>
-          </span>
-          <span class="chip chip-primary chip-removable">
-            Primary Removable
-            <button type="button" class="chip-close" aria-label="Remove chip" style="color: var(--color-primary-700)">&times;</button>
-          </span>
-        </div>
-
-        <h3 style="margin-top: var(--space-2xl)">Pagination</h3>
-        <p>Pagination provides navigation between a series of related content pages.</p>
-        <nav class="pagination" aria-label="Page navigation">
-          <ul class="pagination-list">
-            <li class="pagination-item"><a class="pagination-link is-disabled" href="#" aria-label="Previous" tabindex="-1" aria-disabled="true">&laquo; Prev</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">1</a></li>
-            <li class="pagination-item"><a class="pagination-link is-active" href="#" aria-current="page">2</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">3</a></li>
-            <li class="pagination-item"><span class="pagination-ellipsis">&hellip;</span></li>
-            <li class="pagination-item"><a class="pagination-link" href="#">10</a></li>
-            <li class="pagination-item"><a class="pagination-link" href="#" aria-label="Next">Next &raquo;</a></li>
-          </ul>
-        </nav>
-
-        <h3 style="margin-top: var(--space-2xl)">Breadcrumbs</h3>
-        <p>Breadcrumbs provide secondary navigation to indicate the user's current location.</p>
-        <nav class="breadcrumbs" aria-label="Breadcrumb">
-          <ol class="breadcrumb-list">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Category</a></li>
-            <li class="breadcrumb-item is-active" aria-current="page">Current Page</li>
-          </ol>
-        </nav>
-
-        <h3 style="margin-top: var(--space-2xl)">Avatars</h3>
-        <p>Avatars are used to represent users or entities, typically with an image or initials.</p>
-        <div class="button-showcase">
-          <div class="avatar avatar-sm">JD</div>
-          <div class="avatar avatar-md">
-            <img src="https://placehold.co/48x48/EBF4FA/32A9DD?text=UI" alt="User Avatar" onerror="this.onerror=null; this.src='https://placehold.co/48x48/E9ECEF/868E96?text=??'; this.alt='Placeholder Avatar';" />
-          </div>
-          <div class="avatar avatar-lg" style="background-color: var(--color-accent-500); color: var(--color-neutral-0)">SG</div>
-          <div class="avatar avatar-md" style="border-radius: var(--border-radius-md)">S</div>
-        </div>
-      </section>
-
-      <!-- Utility Classes Section -->
-      <section>
-        <h2>Utility Classes</h2>
-        <p style="margin-bottom: var(--space-l)">A collection of helper classes for common styling needs.</p>
-
-        <h4>Text Alignment</h4>
-        <p class="u-text-left" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-left</code></p>
-        <p class="u-text-center" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-center</code></p>
-        <p class="u-text-right" style="border: 1px dashed #ccc; padding: var(--space-s); margin-bottom: var(--space-s)"><code>.u-text-right</code></p>
-
-        <h4>Display Properties</h4>
-        <div class="u-d-flex" style="gap: var(--space-m); margin-bottom: var(--space-s); align-items: flex-start">
-          <span class="u-d-block" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-block</code></span>
-          <span class="u-d-inline" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-inline</code></span>
-          <span class="u-d-inline-block" style="background: var(--color-neutral-100); padding: var(--space-xs)"><code>.u-d-inline-block</code></span>
-        </div>
-        <p><code>.u-d-none</code> - <span class="u-d-none">This text should be hidden.</span> (Element is hidden)</p>
-
-        <h4>Visibility</h4>
-        <p><code>.u-hidden</code> - <span class="u-hidden">Hidden with display: none !important.</span></p>
-        <p><code>.u-sr-only</code> - <span class="u-sr-only">This text is only for screen readers.</span> (Visually hidden)</p>
-      </section>
-
-      <section>
-        <h2>Specialized Components</h2>
-        <p style="margin-bottom: var(--space-l)">More complex or specific components for various use cases.</p>
-
-        <h3>Sliders</h3>
-        <p>Sliders allow users to select a value from a range.</p>
-        <div class="slider-container">
-          <label for="slider-1" class="form-label">Volume: <span id="slider-value-1">50</span></label>
-          <input type="range" min="0" max="100" value="50" class="slider" id="slider-1" />
-        </div>
-
-        <h3 style="margin-top: var(--space-2xl)">Snackbars / Toasts</h3>
-        <p>Snackbars provide brief, temporary notifications. They appear at the bottom of the screen and disappear after a few seconds.</p>
-        <button type="button" class="btn btn-secondary" id="show-snackbar">Show Snackbar</button>
-        <div id="sample-snackbar" class="snackbar" role="alert">This is a snackbar notification!</div>
-
-        <h3 style="margin-top: var(--space-2xl)">Menus</h3>
-        <p>Menus are similar to dropdowns but are often used for context-specific actions and are not always attached to a button.</p>
-        <ul class="menu" style="display: inline-block; position: static">
-          <li><a class="menu-link" href="#">Action</a></li>
-          <li><a class="menu-link" href="#">Another action</a></li>
-          <li><hr class="menu-divider" /></li>
-          <li><span class="menu-item disabled">Disabled Item</span></li>
-        </ul>
-      </section>
-
-      <footer>
-        <p>&copy; <span id="currentYear"></span> GlideUI Design System. For internal use and reference.</p>
-      </footer>
+      </div>
     </div>
 
     <!-- JavaScript for interactive components -->
