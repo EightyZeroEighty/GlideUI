@@ -1,0 +1,123 @@
+/*
+ * Plumas Disc Golf Theme
+ */
+:root {
+  /* Primary Colors (Forest Green) */
+  --color-primary-50: #f2f7f2;
+  --color-primary-100: #e6efe6;
+  --color-primary-200: #cadded;
+  --color-primary-300: #accba9;
+  --color-primary-400: #8cb88b;
+  --color-primary-500: #6daa6c;
+  --color-primary-600: #4e9b4e;
+  --color-primary-700: #286a28; /* Original Primary Base */
+  --color-primary-800: #1e4f1e;
+  --color-primary-900: #143514;
+
+  /* Secondary Colors (Deep Blue) */
+  --color-secondary-50: #f0f2fb;
+  --color-secondary-100: #d9def3;
+  --color-secondary-200: #c2c9eb;
+  --color-secondary-300: #aab5e3;
+  --color-secondary-400: #8798d5;
+  --color-secondary-500: #647bc8;
+  --color-secondary-600: #415eb6;
+  --color-secondary-700: #0c24a3; /* Original Secondary Base */
+  --color-secondary-800: #091b7a;
+  --color-secondary-900: #061251;
+
+  /* Accent Colors (Vibrant Yellow) */
+  --color-accent-50: #faf9e6;
+  --color-accent-100: #f5f2cc;
+  --color-accent-200: #f0eb99;
+  --color-accent-300: #ebe366;
+  --color-accent-400: #e6da00; /* Original Accent Base */
+  --color-accent-500: #b8ac00;
+  --color-accent-600: #8a8000;
+  --color-accent-700: #5c5500;
+  --color-accent-800: #454000;
+  --color-accent-900: #2e2b00;
+
+  /* Neutral Palette */
+  --color-neutral-0: #ffffff; /* Keep pure white for certain backgrounds */
+  --color-neutral-50: #f9f8f6;
+  --color-neutral-100: #f0ede9;
+  --color-neutral-200: #e2dbd3;
+  --color-neutral-300: #d3c9be;
+  --color-neutral-400: #b7a99d;
+  --color-neutral-500: #9c8f83;
+  --color-neutral-600: #7e7165;
+  --color-neutral-700: #61554b; /* New default body text */
+  --color-neutral-800: #453c34; /* New heading text */
+  --color-neutral-900: #2b251f;
+  --color-neutral-1000: #1c1814; /* New absolute black equivalent */
+
+  /* Update default border color to use new neutrals */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-400);
+
+  /* Override interactive border color to use the new primary color */
+  --color-border-interactive: var(--color-primary-500);
+
+  /* Success: A vibrant, grassy green. */
+  --color-semantic-success-base: #4caf50;
+  --color-semantic-success-background: #edf7ed;
+  --color-semantic-success-text: #1e4620;
+  --color-semantic-success-border: #a3d9a5;
+
+  /* Warning: A deep, earthy gold/amber. */
+  --color-semantic-warning-base: #ffc107;
+  --color-semantic-warning-text: #664d03;
+  --color-semantic-warning-background: #fff9e6;
+  --color-semantic-warning-border: #ffecb5;
+
+  /* Error/Danger: A muted, terracotta red. */
+  --color-semantic-error-base: #d9534f;
+  --color-semantic-error-text: #5d2122;
+  --color-semantic-error-background: #f8d7da;
+  --color-semantic-error-border: #f1aeae;
+
+  /* Information: A clear, calm sky blue. */
+  --color-semantic-info-base: #5bc0de;
+  --color-semantic-info-text: #2c525f;
+  --color-semantic-info-background: #eaf7fa;
+  --color-semantic-info-border: #a8ddec;
+}
+
+/* Dark Mode Overrides for Plumas Disc Golf Theme */
+body.dark-mode {
+  /* Adjust Plumas colors for dark mode */
+  --color-primary-400: #286a28;
+  --color-primary-500: #4caf50; /* Brighter green */
+  --color-primary-600: #66bb6a;
+
+  --color-secondary-500: #5c6bc0; /* Lighter blue */
+  --color-secondary-600: #7986cb;
+
+  --color-accent-400: #ffee58; /* Slightly less harsh yellow */
+  --color-accent-500: #fff176;
+
+  /* Adjust chip colors for the new primary */
+  --chip-bg-primary: var(--color-primary-800);
+  --chip-text-primary: var(--color-primary-100);
+  --chip-border-primary: var(--color-primary-700);
+
+  /* Adjust button colors for the new primary */
+  --btn-primary-bg: var(--color-primary-500);
+  --btn-primary-text: var(--color-neutral-900);
+
+  /* Dark mode neutrals */
+  --color-neutral-0: #1c1814;
+  --color-neutral-50: #2b251f;
+  --color-neutral-100: #3a322c;
+  --color-neutral-200: #494038;
+  --color-neutral-300: #584e44;
+  --color-neutral-400: #716458;
+  --color-neutral-500: #8b7d70;
+  --color-neutral-600: #a7988a;
+  --color-neutral-700: #c2b5a9; /* New dark mode body text */
+  --color-neutral-800: #dcd0c5;
+  --color-neutral-900: #f5f0eb;
+  --color-neutral-1000: #ffffff;
+}

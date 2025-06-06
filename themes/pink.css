@@ -1,0 +1,108 @@
+/*
+ * Pink Theme
+ */
+:root {
+  /* Primary Colors (Playful Pink) */
+  --color-primary-50: #fce4ec;
+  --color-primary-100: #f8bbd0;
+  --color-primary-200: #f48fb1;
+  --color-primary-300: #f06292;
+  --color-primary-400: #ec407a;
+  --color-primary-500: #e91e63; /* Base */
+  --color-primary-600: #d81b60;
+  --color-primary-700: #c2185b;
+  --color-primary-800: #ad1457;
+  --color-primary-900: #880e4f;
+
+  /* Secondary Colors (Mint Green) */
+  --color-secondary-50: #e0f2f1;
+  --color-secondary-100: #b2dfdb;
+  --color-secondary-200: #80cbc4;
+  --color-secondary-300: #4db6ac;
+  --color-secondary-400: #26a69a;
+  --color-secondary-500: #009688; /* Base */
+  --color-secondary-600: #00897b;
+  --color-secondary-700: #00796b;
+  --color-secondary-800: #00695c;
+  --color-secondary-900: #004d40;
+
+  /* Accent Colors (Vibrant Magenta) */
+  --color-accent-50: #fce4ec;
+  --color-accent-100: #f8bbd0;
+  --color-accent-200: #f48fb1;
+  --color-accent-300: #f06292;
+  --color-accent-400: #ec407a;
+  --color-accent-500: #e91e63; /* Base */
+  --color-accent-600: #d81b60;
+  --color-accent-700: #c2185b;
+  --color-accent-800: #ad1457;
+  --color-accent-900: #880e4f;
+
+  /* Neutral Palette */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f9f8f6;
+  --color-neutral-100: #f0ede9;
+  --color-neutral-200: #e2dbd3;
+  --color-neutral-300: #d3c9be;
+  --color-neutral-400: #b7a99d;
+  --color-neutral-500: #9c8f83;
+  --color-neutral-600: #7e7165;
+  --color-neutral-700: #61554b;
+  --color-neutral-800: #453c34;
+  --color-neutral-900: #2b251f;
+  --color-neutral-1000: #1c1814;
+
+  /* Update default border color to use new neutrals */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-400);
+
+  /* Override interactive border color to use the new primary color */
+  --color-border-interactive: var(--color-primary-500);
+
+  /* Semantic Colors */
+  --color-semantic-success-base: #4caf50;
+  --color-semantic-success-background: #edf7ed;
+  --color-semantic-success-text: #1e4620;
+  --color-semantic-success-border: #a3d9a5;
+
+  --color-semantic-warning-base: #ff9800;
+  --color-semantic-warning-text: #663d00;
+  --color-semantic-warning-background: #fff5e6;
+  --color-semantic-warning-border: #ffdcb3;
+
+  --color-semantic-error-base: #f44336;
+  --color-semantic-error-text: #611a15;
+  --color-semantic-error-background: #fdecea;
+  --color-semantic-error-border: #f8c1be;
+
+  --color-semantic-info-base: #2196f3;
+  --color-semantic-info-text: #0b3b60;
+  --color-semantic-info-background: #e7f3fe;
+  --color-semantic-info-border: #b4d8fb;
+}
+
+/* Dark Mode Overrides for Pink Theme */
+body.dark-mode {
+  /* Adjust Pink colors for dark mode */
+  --color-primary-400: #e91e63;
+  --color-primary-500: #ec407a; /* Brighter pink */
+  --color-primary-600: #f06292;
+
+  --color-secondary-500: #26a69a;
+  --color-secondary-600: #4db6ac;
+
+  /* Dark mode neutrals (Desaturated Rose/Pink) */
+  --color-neutral-0: #2a1a22;
+  --color-neutral-50: #3b2530;
+  --color-neutral-100: #4d313e;
+  --color-neutral-200: #5e3c4b;
+  --color-neutral-300: #6f4759;
+  --color-neutral-400: #8b6274;
+  --color-neutral-500: #a77d8f;
+  --color-neutral-600: #c299a9;
+  --color-neutral-700: #dcc4cb; /* New dark mode body text */
+  --color-neutral-800: #e8d7de;
+  --color-neutral-900: #f5ebf0;
+  --color-neutral-1000: #ffffff;
+}

@@ -1,0 +1,112 @@
+/*
+ * Purple Theme
+ */
+:root {
+  /* Primary Colors (Royal Purple) */
+  --color-primary-50: #f3e5f5;
+  --color-primary-100: #e1bee7;
+  --color-primary-200: #ce93d8;
+  --color-primary-300: #ba68c8;
+  --color-primary-400: #ab47bc;
+  --color-primary-500: #9c27b0; /* Base */
+  --color-primary-600: #8e24aa;
+  --color-primary-700: #7b1fa2;
+  --color-primary-800: #6a1b9a;
+  --color-primary-900: #4a148c;
+
+  /* Secondary Colors (Soft Lavender) */
+  --color-secondary-50: #ede7f6;
+  --color-secondary-100: #d1c4e9;
+  --color-secondary-200: #b39ddb;
+  --color-secondary-300: #9575cd;
+  --color-secondary-400: #7e57c2;
+  --color-secondary-500: #673ab7; /* Base */
+  --color-secondary-600: #5e35b1;
+  --color-secondary-700: #512da8;
+  --color-secondary-800: #4527a0;
+  --color-secondary-900: #311b92;
+
+  /* Accent Colors (Muted Gold) */
+  --color-accent-50: #fff8e1;
+  --color-accent-100: #ffecb3;
+  --color-accent-200: #ffe082;
+  --color-accent-300: #ffd54f;
+  --color-accent-400: #ffca28;
+  --color-accent-500: #ffc107; /* Base */
+  --color-accent-600: #ffb300;
+  --color-accent-700: #ffa000;
+  --color-accent-800: #ff8f00;
+  --color-accent-900: #ff6f00;
+
+  /* Neutral Palette */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f9f8f6;
+  --color-neutral-100: #f0ede9;
+  --color-neutral-200: #e2dbd3;
+  --color-neutral-300: #d3c9be;
+  --color-neutral-400: #b7a99d;
+  --color-neutral-500: #9c8f83;
+  --color-neutral-600: #7e7165;
+  --color-neutral-700: #61554b;
+  --color-neutral-800: #453c34;
+  --color-neutral-900: #2b251f;
+  --color-neutral-1000: #1c1814;
+
+  /* Update default border color to use new neutrals */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-400);
+
+  /* Override interactive border color to use the new primary color */
+  --color-border-interactive: var(--color-primary-500);
+
+  /* Semantic Colors */
+  --color-semantic-success-base: #4caf50;
+  --color-semantic-success-background: #edf7ed;
+  --color-semantic-success-text: #1e4620;
+  --color-semantic-success-border: #a3d9a5;
+
+  --color-semantic-warning-base: #ffc107;
+  --color-semantic-warning-text: #664d03;
+  --color-semantic-warning-background: #fff9e6;
+  --color-semantic-warning-border: #ffecb5;
+
+  --color-semantic-error-base: #d9534f;
+  --color-semantic-error-text: #5d2122;
+  --color-semantic-error-background: #f8d7da;
+  --color-semantic-error-border: #f1aeae;
+
+  --color-semantic-info-base: #5bc0de;
+  --color-semantic-info-text: #2c525f;
+  --color-semantic-info-background: #eaf7fa;
+  --color-semantic-info-border: #a8ddec;
+}
+
+/* Dark Mode Overrides for Purple Theme */
+body.dark-mode {
+  /* Adjust Purple colors for dark mode */
+  --color-primary-400: #9c27b0;
+  --color-primary-500: #ab47bc; /* Brighter purple */
+  --color-primary-600: #ba68c8;
+
+  --color-secondary-500: #7e57c2;
+  --color-secondary-600: #9575cd;
+
+  --color-accent-400: #ffc107;
+  --color-accent-500: #ffca28;
+  --color-accent-600: #ffd54f;
+
+  /* Dark mode neutrals (Desaturated Purple) */
+  --color-neutral-0: #251a2a;
+  --color-neutral-50: #34253b;
+  --color-neutral-100: #42314d;
+  --color-neutral-200: #513c5e;
+  --color-neutral-300: #5f476f;
+  --color-neutral-400: #79628b;
+  --color-neutral-500: #937da7;
+  --color-neutral-600: #ad99c2;
+  --color-neutral-700: #c9c4dc; /* New dark mode body text */
+  --color-neutral-800: #dad7e8;
+  --color-neutral-900: #ebebf5;
+  --color-neutral-1000: #ffffff;
+}

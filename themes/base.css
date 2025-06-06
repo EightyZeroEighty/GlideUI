@@ -1,0 +1,142 @@
+/*
+ * Default Theme
+ */
+:root {
+  /* --- GlideUI Base Themeable Colors (Abstract/Minimal Placeholders) --- */
+  --color-primary-50: #ebf4fa;
+  --color-primary-100: #d6e9f5;
+  --color-primary-200: #addaef;
+  --color-primary-300: #84cae9;
+  --color-primary-400: #5bb9e3;
+  --color-primary-500: #32a9dd; /* Base */
+  --color-primary-600: #2a8fba;
+  --color-primary-700: #227598;
+  --color-primary-800: #1a5b75;
+  --color-primary-900: #124153;
+
+  --color-secondary-50: #f5f7f8;
+  --color-secondary-100: #ebeef0;
+  --color-secondary-200: #d8dde1;
+  --color-secondary-300: #c4cbd2;
+  --color-secondary-400: #b1b9c3;
+  --color-secondary-500: #8f9caa; /* Base */
+  --color-secondary-600: #798591;
+  --color-secondary-700: #636e78;
+  --color-secondary-800: #4d575f;
+  --color-secondary-900: #374046;
+
+  --color-accent-50: #eaf6f5;
+  --color-accent-100: #d5ede9;
+  --color-accent-200: #abdbcf;
+  --color-accent-300: #82c9b6;
+  --color-accent-400: #58b79c;
+  --color-accent-500: #2fa482; /* Base */
+  --color-accent-600: #288a6e;
+  --color-accent-700: #20705a;
+  --color-accent-800: #185646;
+  --color-accent-900: #103c32;
+
+  /* Neutral Color Palette (Grays) - Core to GlideUI */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f8f9fa;
+  --color-neutral-100: #f1f3f5;
+  --color-neutral-200: #e9ecef;
+  --color-neutral-300: #dee2e6;
+  --color-neutral-400: #ced4da;
+  --color-neutral-500: #adb5bd;
+  --color-neutral-600: #868e96;
+  --color-neutral-700: #495057; /* Default body text */
+  --color-neutral-800: #343a40;
+  --color-neutral-900: #212529;
+  --color-neutral-1000: #000000;
+
+  /* Semantic Color System - Core to GlideUI (Abstract/Minimal Placeholders) */
+  --color-semantic-success-background: #e8f5e9;
+  --color-semantic-success-text: #2a573f;
+  --color-semantic-success-border: #a5d6a7;
+  --color-semantic-success-base: #6bbf70;
+
+  --color-semantic-warning-background: #fff8e1;
+  --color-semantic-warning-text: #854d0e;
+  --color-semantic-warning-border: #ffcc80;
+  --color-semantic-warning-base: #ffb74d;
+
+  --color-semantic-error-background: #ffebee;
+  --color-semantic-error-text: #b71c1c;
+  --color-semantic-error-border: #ef9a9a;
+  --color-semantic-error-base: #e57373;
+
+  --color-semantic-info-background: #e3f2fd;
+  --color-semantic-info-text: #1976d2;
+  --color-semantic-info-border: #90caf9;
+  --color-semantic-info-base: #64b5f6;
+}
+
+/* Dark Mode Color Overrides (Class-based) */
+body.dark-mode {
+  /* Invert neutral colors */
+  --color-neutral-0: #1a1a1a;
+  --color-neutral-50: #2c2c2c;
+  --color-neutral-100: #333333;
+  --color-neutral-200: #444444;
+  --color-neutral-300: #555555;
+  --color-neutral-400: #666666;
+  --color-neutral-500: #888888;
+  --color-neutral-600: #aaaaaa;
+  --color-neutral-700: #cccccc; /* Default body text for dark mode */
+  --color-neutral-800: #e0e0e0;
+  --color-neutral-900: #f5f5f5;
+  --color-neutral-1000: #ffffff;
+
+  /* Adjust themeable colors for better contrast in dark mode */
+  --color-primary-400: #32a9dd;
+  --color-primary-500: #63c0f0; /* Lighter blue for dark mode */
+  --color-primary-600: #89d0f4;
+
+  --color-secondary-500: #858e98;
+  --color-secondary-600: #a0a8b1;
+
+  --color-accent-400: #2fa482;
+  --color-accent-500: #4dcab1;
+  --color-accent-600: #78e0c3;
+
+  /* Adjust form input colors for dark mode */
+  --input-background-color: var(--color-neutral-100);
+  --input-text-color: var(--color-neutral-800);
+  --input-border-color: var(--color-neutral-400);
+  --input-border-color-hover: var(--color-neutral-600);
+  --input-placeholder-color: var(--color-neutral-500);
+  --input-background-color-disabled: var(--color-neutral-200);
+  --input-text-color-disabled: var(--color-neutral-500);
+
+  /* Adjust other component colors */
+  --card-background-color: var(--color-neutral-100);
+  --card-border-color: var(--color-neutral-300);
+  --card-header-bg: var(--color-neutral-200);
+
+  --table-header-bg: var(--color-neutral-200);
+  --table-header-text-color: var(--color-neutral-900);
+  --table-row-hover-bg: var(--color-neutral-200);
+
+  --tab-hover-bg: var(--color-neutral-200);
+
+  /* Adjust semantic colors for dark mode */
+  --color-semantic-success-background: #1c3d24;
+  --color-semantic-success-text: #a5d6a7;
+  --color-semantic-success-border: #2e7d32;
+
+  --color-semantic-info-background: #0d47a1;
+  --color-semantic-info-text: #90caf9;
+  --color-semantic-info-border: #1976d2;
+
+  --color-semantic-warning-background: #4d3300;
+  --color-semantic-warning-text: #ffcc80;
+  --color-semantic-warning-border: #ffa000;
+
+  --color-semantic-error-background: #4a141e;
+  --color-semantic-error-text: #ef9a9a;
+  --color-semantic-error-border: #d32f2f;
+
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --shadow-color-strong: rgba(0, 0, 0, 0.5);
+}

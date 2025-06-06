@@ -1,0 +1,112 @@
+/*
+ * Orange Theme
+ */
+:root {
+  /* Primary Colors (Bright Orange) */
+  --color-primary-50: #fff3e0;
+  --color-primary-100: #ffe0b2;
+  --color-primary-200: #ffcc80;
+  --color-primary-300: #ffb74d;
+  --color-primary-400: #ffa726;
+  --color-primary-500: #ff9800; /* Base */
+  --color-primary-600: #fb8c00;
+  --color-primary-700: #f57c00;
+  --color-primary-800: #ef6c00;
+  --color-primary-900: #e65100;
+
+  /* Secondary Colors (Slate Blue) */
+  --color-secondary-50: #eceff1;
+  --color-secondary-100: #cfd8dc;
+  --color-secondary-200: #b0bec5;
+  --color-secondary-300: #90a4ae;
+  --color-secondary-400: #78909c;
+  --color-secondary-500: #607d8b; /* Base */
+  --color-secondary-600: #546e7a;
+  --color-secondary-700: #455a64;
+  --color-secondary-800: #37474f;
+  --color-secondary-900: #263238;
+
+  /* Accent Colors (Lime Green) */
+  --color-accent-50: #f9fbe7;
+  --color-accent-100: #f0f4c3;
+  --color-accent-200: #e6ee9c;
+  --color-accent-300: #dce775;
+  --color-accent-400: #d4e157;
+  --color-accent-500: #cddc39; /* Base */
+  --color-accent-600: #c0ca33;
+  --color-accent-700: #afb42b;
+  --color-accent-800: #9e9d24;
+  --color-accent-900: #827717;
+
+  /* Neutral Palette */
+  --color-neutral-0: #ffffff;
+  --color-neutral-50: #f9f8f6;
+  --color-neutral-100: #f0ede9;
+  --color-neutral-200: #e2dbd3;
+  --color-neutral-300: #d3c9be;
+  --color-neutral-400: #b7a99d;
+  --color-neutral-500: #9c8f83;
+  --color-neutral-600: #7e7165;
+  --color-neutral-700: #61554b;
+  --color-neutral-800: #453c34;
+  --color-neutral-900: #2b251f;
+  --color-neutral-1000: #1c1814;
+
+  /* Update default border color to use new neutrals */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-subtle: var(--color-neutral-200);
+  --color-border-strong: var(--color-neutral-400);
+
+  /* Override interactive border color to use the new primary color */
+  --color-border-interactive: var(--color-primary-500);
+
+  /* Semantic Colors */
+  --color-semantic-success-base: #4caf50;
+  --color-semantic-success-background: #edf7ed;
+  --color-semantic-success-text: #1e4620;
+  --color-semantic-success-border: #a3d9a5;
+
+  --color-semantic-warning-base: #ffc107;
+  --color-semantic-warning-text: #664d03;
+  --color-semantic-warning-background: #fff9e6;
+  --color-semantic-warning-border: #ffecb5;
+
+  --color-semantic-error-base: #d9534f;
+  --color-semantic-error-text: #5d2122;
+  --color-semantic-error-background: #f8d7da;
+  --color-semantic-error-border: #f1aeae;
+
+  --color-semantic-info-base: #5bc0de;
+  --color-semantic-info-text: #2c525f;
+  --color-semantic-info-background: #eaf7fa;
+  --color-semantic-info-border: #a8ddec;
+}
+
+/* Dark Mode Overrides for Orange Theme */
+body.dark-mode {
+  /* Adjust Orange colors for dark mode */
+  --color-primary-400: #ff9800;
+  --color-primary-500: #ffa726; /* Brighter orange */
+  --color-primary-600: #ffb74d;
+
+  --color-secondary-500: #78909c;
+  --color-secondary-600: #90a4ae;
+
+  --color-accent-400: #cddc39;
+  --color-accent-500: #d4e157;
+  --color-accent-600: #dce775;
+
+  /* Dark mode neutrals (Desaturated Orange/Brown) */
+  --color-neutral-0: #2a201a;
+  --color-neutral-50: #3b2e25;
+  --color-neutral-100: #4d3b31;
+  --color-neutral-200: #5e483c;
+  --color-neutral-300: #6f5547;
+  --color-neutral-400: #8b7062;
+  --color-neutral-500: #a78c7d;
+  --color-neutral-600: #c2a899;
+  --color-neutral-700: #dccdc4; /* New dark mode body text */
+  --color-neutral-800: #e8e0d7;
+  --color-neutral-900: #f5f0eb;
+  --color-neutral-1000: #ffffff;
+}
