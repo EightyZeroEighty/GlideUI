@@ -14,8 +14,9 @@
       // ... more component links
     ];
   
-    // A rune to compute the active status based on the current path
-    const isActive = (path) => $derived(path === $page.url.pathname);
+    function isActive(path) {
+    return path === $page.url.pathname;
+  }
   </script>
   
   <nav class="sg-sidebar">
